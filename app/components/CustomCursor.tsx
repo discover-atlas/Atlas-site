@@ -1,0 +1,73 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import { motion, useMotionValue, useSpring } from "framer-motion";
+
+export default function CustomCursor() {
+  const [isHovering, setIsHovering] = useState(false);
+  const [isPointer, setIsPointer] = useState(false);
+  const [mounted, setMounted] = useState(false);
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
+
+  const mouseX = useMotionValue(-200);
+  const mouseY = useMotionValue(-200);
+
+  const dotX = useSpring(mouseX, { stiffness: 800, damping: 35 });
+  const dotY = useSpring(mouseY, { stiffness: 800, damping: 35 });
+
+  const ringX = useSpring(mouseX, { stiffness: 200, damping: 22 });
+  const ringY = useSpring(mouseY, { stiffness: 200, damping: 22 });
+
+  useEffect(() => {
+    setMounted(true);
+    if ("ontouchstart" in window || navigator.maxTouchPoints > 0) {
+      setIsTouchDevice(true);
+      return;
+    }
+
+    const move = (e: MouseEvent) => {
+      mouseX.set(e.clientX);
+      mouseY.set(e.clientY);
+
+      const el = document.elementFromPoint(e.clientX, e.clientY);
+      const hoverable = el?.closest(
+        'a, button, [data-hover], input, textarea, select, label'
+      );
+      setIsPointer(!!hoverable);
+      setIsHovering(!!hoverable);
+    };
+
+    window.addEventListener("mousemove", move, { passive: true });
+    return () => window.removeEventListener("mousemove", move);
+  }, [mouseX, mouseY]);
+
+  if (!mounted || isTouchDevice) return null;
+
+  return (
+    <>
+      {/* Inner dot */}
+      <motion.div
+        style={{ x: dotX, y: dotY }}
+        animate={{ scale: isHovering ? 0 : 1, opacity: 1 }}
+        transition={{ scale: { type: "spring", stiffness: 600, damping: 30 } }}
+        className="pointer-events-none fixed left-0 top-0 z-[99999] h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#f36c21]"
+      />
+
+      {/* Outer ring */}
+      <motion.div
+        style={{ x: ringX, y: ringY }}
+        animate={{
+          scale: isHovering ? 2.2 : 1,
+          backgroundColor: isHovering
+            ? "rgba(243,108,33,0.12)"
+            : "transparent",
+          borderColor: isHovering
+            ? "rgba(243,108,33,0.8)"
+            : "rgba(243,108,33,0.5)",
+        }}
+        transition={{ type: "spring", stiffness: 300, damping: 28 }}
+        className="pointer-events-none fixed left-0 top-0 z-[99998] h-10 w-10 -translate-x-1/2 -translate-y-1/2 rounded-full border"
+      />
+    </>
+  );
+}

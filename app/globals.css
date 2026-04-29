@@ -1,0 +1,152 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #0a0a0a;
+  --color-foreground: #f5f1ea;
+  --color-orange: #f36c21;
+  --color-orange-dim: rgba(243, 108, 33, 0.3);
+  --color-dark: #111111;
+  --color-gray-dark: #1a1a1a;
+  --font-display: var(--font-anton);
+  --font-sans: var(--font-inter);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  cursor: none;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  * {
+    cursor: auto;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: #0a0a0a;
+  color: #f5f1ea;
+  overflow-x: hidden;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Film Grain ── */
+.film-grain {
+  position: fixed;
+  inset: -200%;
+  width: 400%;
+  height: 400%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 256px 256px;
+  animation: grain 0.4s steps(3) infinite;
+}
+
+@keyframes grain {
+  0%   { transform: translate(0,    0   ); }
+  20%  { transform: translate(-4%,  8%  ); }
+  40%  { transform: translate(-12%, 4%  ); }
+  60%  { transform: translate(6%,  -20% ); }
+  80%  { transform: translate(-4%,  20% ); }
+  100% { transform: translate(2%,   12% ); }
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 2px; }
+::-webkit-scrollbar-track { background: #0a0a0a; }
+::-webkit-scrollbar-thumb { background: #f36c21; border-radius: 1px; }
+
+/* ── Selection ── */
+::selection {
+  background: #f36c21;
+  color: #000;
+}
+
+/* ── Orange glow utility ── */
+.orange-glow {
+  box-shadow: 0 0 30px rgba(243, 108, 33, 0.4), 0 0 60px rgba(243, 108, 33, 0.2);
+}
+
+.orange-text-glow {
+  text-shadow: 0 0 30px rgba(243, 108, 33, 0.5);
+}
+
+/* ── Display font ── */
+.font-display {
+  font-family: var(--font-anton), var(--font-display), sans-serif;
+  letter-spacing: 0.01em;
+}
+
+/* ── Marquee ── */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* ── Gradient border ── */
+.gradient-border {
+  position: relative;
+  background: #111;
+  border-radius: 1rem;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, rgba(243,108,33,0.4), transparent 50%, rgba(243,108,33,0.1));
+  z-index: -1;
+}
+
+/* ── Process horizontal scroll ── */
+.process-scroll {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  gap: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+.process-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.process-card {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+}
+
+/* ── Clip path reveals ── */
+.clip-hidden {
+  clip-path: inset(0 0 100% 0);
+}
+
+.clip-reveal {
+  clip-path: inset(0 0 0% 0);
+  transition: clip-path 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
