@@ -32,6 +32,7 @@
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -128,8 +129,8 @@ body {
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  gap: 1.5rem;
-  padding-bottom: 2rem;
+  gap: 1.25rem;
+  padding-bottom: 1.5rem;
 }
 
 .process-scroll::-webkit-scrollbar {
@@ -139,6 +140,21 @@ body {
 .process-card {
   scroll-snap-align: start;
   flex-shrink: 0;
+}
+
+@media (min-width: 1024px) {
+  .process-scroll {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    overflow: visible;
+    scroll-snap-type: none;
+    padding-bottom: 0;
+  }
+  .process-card {
+    flex-shrink: unset;
+    width: auto !important;
+    max-width: none !important;
+  }
 }
 
 /* ── Clip path reveals ── */

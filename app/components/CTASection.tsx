@@ -89,13 +89,13 @@ export default function CTASection() {
     <section
       ref={ref}
       id="contact"
-      className="relative bg-[#0a0a0a] py-40 md:py-52 overflow-hidden"
+      className="relative bg-[#0a0a0a] py-20 sm:py-24 md:py-32 lg:py-40 overflow-hidden"
     >
       {/* Background blobs */}
       <motion.div
         animate={{ x: [-40, 40, -40], y: [-30, 30, -30] }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full pointer-events-none"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[min(800px,80vw)] h-[min(800px,80vw)] rounded-full pointer-events-none"
         style={{
           background: "radial-gradient(circle, rgba(243,108,33,0.12) 0%, transparent 70%)",
           filter: "blur(60px)",
@@ -111,8 +111,9 @@ export default function CTASection() {
           initial={{ opacity: 0, scale: 1.2 }}
           animate={isInView ? { opacity: 1, scale: 1 } : {}}
           transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
-          className="font-display text-[18vw] select-none"
+          className="font-display select-none"
           style={{
+            fontSize: "clamp(6rem, 18vw, 18rem)",
             WebkitTextStroke: "1px rgba(243,108,33,0.06)",
             color: "transparent",
             lineHeight: 1,
@@ -122,7 +123,7 @@ export default function CTASection() {
         </motion.span>
       </div>
 
-      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
+      <div className="relative z-10 max-w-[900px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.span
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -138,7 +139,8 @@ export default function CTASection() {
             initial={{ y: "110%", opacity: 0 }}
             animate={isInView ? { y: 0, opacity: 1 } : {}}
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
-            className="font-display text-[13vw] sm:text-[9vw] md:text-[7vw] leading-tight"
+            className="font-display leading-tight"
+            style={{ fontSize: "clamp(2.75rem, 7vw, 7rem)" }}
           >
             Ready to Book
             <br />

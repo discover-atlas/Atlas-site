@@ -17,26 +17,26 @@ const industries = [
 
 export default function IndustriesSection() {
   return (
-    <section className="relative bg-[#080808] py-32 md:py-40 overflow-hidden">
+    <section className="relative bg-[#080808] py-16 sm:py-20 md:py-28 lg:py-32 overflow-hidden">
       {/* Background */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{ background: "radial-gradient(ellipse 80% 60% at 100% 50%, rgba(243,108,33,0.04) 0%, transparent 60%)" }}
       />
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6">
+      <div className="relative z-10 max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="mb-16"
+          className="mb-10 md:mb-14 lg:mb-16"
         >
           <span className="text-[11px] tracking-[0.25em] uppercase text-[#f36c21] font-medium mb-4 block">
             Industries we serve
           </span>
-          <h2 className="font-display text-5xl md:text-6xl lg:text-7xl text-[#f5f1ea] leading-tight">
+          <h2 className="font-display text-[clamp(2.5rem,5.5vw,5rem)] text-[#f5f1ea] leading-tight">
             YOUR TRADE,
             <br />
             <span className="text-[#f36c21]">OUR EXPERTISE</span>

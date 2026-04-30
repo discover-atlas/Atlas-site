@@ -26,9 +26,9 @@ const notifications = [
 ];
 
 const blobs = [
-  { size: 700, x: [-80, 60, -120], y: [-60, 80, -40], duration: 9, opacity: 0.22, color: "#f36c21" },
-  { size: 500, x: [120, -80, 180], y: [80, -120, 60], duration: 13, opacity: 0.12, color: "#f36c21" },
-  { size: 400, x: [-60, 160, -100], y: [140, -60, 200], duration: 11, opacity: 0.08, color: "#ff8c42" },
+  { size: 600, x: [-40, 30, -60], y: [-30, 40, -20], duration: 9, opacity: 0.22, color: "#f36c21" },
+  { size: 420, x: [60, -40, 90], y: [40, -60, 30], duration: 13, opacity: 0.12, color: "#f36c21" },
+  { size: 340, x: [-30, 80, -50], y: [70, -30, 100], duration: 11, opacity: 0.08, color: "#ff8c42" },
 ];
 
 const headlineLines = [
@@ -89,7 +89,7 @@ export default function Hero() {
       {/* Main content */}
       <motion.div
         style={{ opacity }}
-        className="relative z-10 flex flex-col items-center text-center px-6 max-w-6xl mx-auto pt-32 md:pt-24"
+        className="relative z-10 flex flex-col items-center text-center px-6 max-w-[1200px] mx-auto pt-24 pb-24 md:pt-28 md:pb-28 w-full"
       >
         {/* Eyebrow */}
         <motion.div
@@ -106,13 +106,13 @@ export default function Hero() {
         </motion.div>
 
         {/* Headline — word by word */}
-        <h1 className="font-display text-[13vw] sm:text-[10vw] md:text-[8.5vw] lg:text-[7.5vw] leading-[0.9] mb-8">
+        <h1 className="font-display leading-[0.9] mb-8" style={{ fontSize: "clamp(2.75rem, 7.5vw, 7rem)" }}>
           {headlineLines.map((line, li) => (
             <div key={li} className="flex flex-wrap justify-center gap-x-[0.2em]">
               {line.words.map((word, wi) => {
                 const index = li * 3 + wi;
                 return (
-                  <div key={wi} className="overflow-hidden pb-1">
+                  <div key={wi} className="overflow-hidden pb-2">
                     <motion.span
                       custom={index}
                       initial="hidden"
@@ -205,7 +205,7 @@ export default function Hero() {
       </motion.div>
 
       {/* Floating notification cards */}
-      <div className="absolute right-6 md:right-12 top-1/2 -translate-y-1/2 flex flex-col gap-3 z-10 hidden lg:flex">
+      <div className="absolute right-4 xl:right-10 top-1/2 -translate-y-1/2 flex flex-col gap-3 z-10 hidden lg:flex max-w-[220px] xl:max-w-[240px]">
         {notifications.map((notif, i) => (
           <motion.div
             key={i}

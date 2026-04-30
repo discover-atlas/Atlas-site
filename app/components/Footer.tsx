@@ -45,14 +45,14 @@ export default function Footer() {
         aria-hidden="true"
       >
         <span
-          className="font-display text-[18vw] select-none leading-none"
-          style={{ color: "rgba(243,108,33,0.02)" }}
+          className="font-display select-none leading-none"
+          style={{ fontSize: "clamp(4rem, 18vw, 18rem)", color: "rgba(243,108,33,0.02)" }}
         >
           ATLAS LEADS
         </span>
       </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6 py-20">
+      <div className="relative z-10 max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20">
         {/* Top row */}
         <div className="grid md:grid-cols-3 gap-12 mb-16">
           {/* Brand block */}

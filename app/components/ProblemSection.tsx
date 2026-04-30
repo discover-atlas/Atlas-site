@@ -54,7 +54,7 @@ export default function ProblemSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden bg-[#080808] py-32 md:py-40"
+      className="relative overflow-hidden bg-[#080808] py-16 sm:py-20 md:py-28 lg:py-32"
     >
       {/* Parallax particles */}
       <motion.div style={{ y: bgY }} className="absolute inset-0 pointer-events-none">
@@ -88,15 +88,16 @@ export default function ProblemSection() {
         background: "radial-gradient(ellipse 80% 50% at 50% 50%, rgba(243,108,33,0.04) 0%, transparent 70%)"
       }} />
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6">
+      <div className="relative z-10 max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Big outlined headline */}
-        <div ref={headingRef} className="mb-20 overflow-hidden">
+        <div ref={headingRef} className="mb-12 md:mb-16 lg:mb-20 overflow-hidden">
           <motion.h2
             initial={{ y: "110%", opacity: 0 }}
             animate={isHeadingInView ? { y: 0, opacity: 1 } : {}}
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-            className="font-display text-[9vw] md:text-[7vw] lg:text-[5.5vw] leading-tight"
+            className="font-display leading-tight"
             style={{
+              fontSize: "clamp(1.875rem, 5.5vw, 5.5rem)",
               WebkitTextStroke: "1px rgba(245,241,234,0.15)",
               color: "transparent",
             }}
@@ -121,13 +122,13 @@ export default function ProblemSection() {
               viewport={{ once: true, margin: "-10%" }}
               transition={{ delay: i * 0.15, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
               whileHover={{ y: -6, scale: 1.02 }}
-              className="relative rounded-2xl border border-white/8 bg-[#0f0f0f] p-8 overflow-hidden"
+              className="relative rounded-2xl border border-white/8 bg-[#0f0f0f] p-5 md:p-8 overflow-hidden"
             >
               {/* Corner glow */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-[#f36c21] opacity-[0.04] rounded-full -translate-x-1/4 -translate-y-1/4 blur-2xl" />
 
               <div className="relative z-10">
-                <div className="font-display text-6xl md:text-7xl text-[#f36c21] mb-4 orange-text-glow">
+                <div className="font-display text-[clamp(2.5rem,5vw,4.5rem)] text-[#f36c21] mb-4 orange-text-glow">
                   <AnimatedCounter
                     to={stat.value}
                     prefix={stat.prefix}

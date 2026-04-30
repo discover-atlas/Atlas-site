@@ -73,7 +73,7 @@ function StepCard({ step, index }: { step: typeof steps[0]; index: number }) {
       animate={isInView ? "visible" : "hidden"}
       variants={v}
       transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: index * 0.05 }}
-      className="process-card w-[80vw] max-w-sm md:w-72 lg:w-80 rounded-2xl bg-[#0f0f0f] border border-white/8 p-8 flex flex-col gap-6 relative overflow-hidden"
+      className="process-card w-[min(80vw,20rem)] md:w-64 rounded-2xl bg-[#0f0f0f] border border-white/8 p-6 flex flex-col gap-5 relative overflow-hidden"
     >
       {/* Number watermark */}
       <div
@@ -105,7 +105,7 @@ function StepCard({ step, index }: { step: typeof steps[0]; index: number }) {
       </div>
 
       {/* Description */}
-      <p className="text-sm text-[#f5f1ea]/50 leading-relaxed flex-1">{step.desc}</p>
+      <p className="text-sm text-[#f5f1ea]/50 leading-relaxed flex-1 min-w-0 break-words">{step.desc}</p>
 
       {/* Bottom indicator */}
       <motion.div
@@ -123,16 +123,16 @@ export default function ProcessSection() {
   const isHeaderInView = useInView(headerRef, { once: true });
 
   return (
-    <section id="process" className="relative bg-[#080808] py-32 md:py-40 overflow-hidden">
+    <section id="process" className="relative bg-[#080808] py-16 sm:py-20 md:py-28 lg:py-32 overflow-hidden">
       {/* Background accent */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{ background: "radial-gradient(ellipse 70% 50% at 0% 50%, rgba(243,108,33,0.04) 0%, transparent 60%)" }}
       />
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6">
+      <div className="relative z-10 max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div ref={headerRef} className="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6">
+        <div ref={headerRef} className="mb-10 md:mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div>
             <motion.span
               initial={{ opacity: 0, x: -20 }}
@@ -147,7 +147,7 @@ export default function ProcessSection() {
                 initial={{ y: "100%", opacity: 0 }}
                 animate={isHeaderInView ? { y: 0, opacity: 1 } : {}}
                 transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
-                className="font-display text-5xl md:text-6xl lg:text-7xl text-[#f5f1ea]"
+                className="font-display text-[clamp(2.5rem,5.5vw,5rem)] text-[#f5f1ea]"
               >
                 FOUR STEPS TO
                 <br />

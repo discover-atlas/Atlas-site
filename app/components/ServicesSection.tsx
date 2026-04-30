@@ -346,7 +346,7 @@ function ServiceCard({ service }: { service: ServiceBlock }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-10%" }}
       transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-      className={`grid md:grid-cols-2 gap-12 md:gap-20 items-center ${
+      className={`grid md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center ${
         service.reverse ? "md:[&>*:first-child]:order-2" : ""
       }`}
     >
@@ -361,7 +361,7 @@ function ServiceCard({ service }: { service: ServiceBlock }) {
         >
           {service.tag}
         </motion.span>
-        <h3 className="font-display text-4xl md:text-5xl lg:text-6xl text-[#f5f1ea] leading-tight mb-6">
+        <h3 className="font-display text-[clamp(2rem,3.5vw,3.75rem)] text-[#f5f1ea] leading-tight mb-6">
           {service.title}
         </h3>
         <p className="text-[#f5f1ea]/50 text-base leading-relaxed mb-8">{service.desc}</p>
@@ -388,7 +388,7 @@ function ServiceCard({ service }: { service: ServiceBlock }) {
         style={{ transform }}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
-        className="rounded-2xl bg-[#0f0f0f] border border-white/8 p-6 shadow-2xl"
+        className="rounded-2xl bg-[#0f0f0f] border border-white/8 p-4 md:p-6 shadow-2xl overflow-hidden"
       >
         {service.demo}
       </motion.div>
@@ -459,26 +459,26 @@ export default function ServicesSection() {
   ];
 
   return (
-    <section id="services" className="relative bg-[#0a0a0a] py-32 md:py-40">
+    <section id="services" className="relative bg-[#0a0a0a] py-16 sm:py-20 md:py-28 lg:py-32">
       {/* Subtle background */}
       <div
         className="absolute inset-0 pointer-events-none opacity-30"
         style={{ background: "radial-gradient(ellipse 60% 40% at 50% 0%, rgba(243,108,33,0.05) 0%, transparent 100%)" }}
       />
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6">
+      <div className="relative z-10 max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="mb-24 max-w-2xl"
+          className="mb-14 md:mb-20 max-w-2xl"
         >
           <span className="text-[11px] tracking-[0.25em] uppercase text-[#f36c21] font-medium mb-4 block">
             What we build for you
           </span>
-          <h2 className="font-display text-5xl md:text-6xl lg:text-7xl text-[#f5f1ea] leading-tight">
+          <h2 className="font-display text-[clamp(2.5rem,5.5vw,5rem)] text-[#f5f1ea] leading-tight">
             THE FULL
             <br />
             <span className="text-[#f36c21]">GROWTH STACK</span>
@@ -486,7 +486,7 @@ export default function ServicesSection() {
         </motion.div>
 
         {/* Service blocks */}
-        <div className="space-y-32">
+        <div className="space-y-16 md:space-y-24 lg:space-y-28">
           {services.map((service) => (
             <ServiceCard key={service.id} service={service} />
           ))}

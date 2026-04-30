@@ -43,7 +43,7 @@ export default function ResultsSection() {
     <section
       ref={ref}
       id="results"
-      className="relative bg-[#0a0a0a] py-32 md:py-40 overflow-hidden"
+      className="relative bg-[#0a0a0a] py-16 sm:py-20 md:py-28 lg:py-32 overflow-hidden"
     >
       {/* Full-bleed dark bg with orange gradient */}
       <motion.div
@@ -63,25 +63,25 @@ export default function ResultsSection() {
         aria-hidden="true"
       >
         <span
-          className="font-display text-[20vw] text-[#f36c21] select-none"
-          style={{ opacity: 0.02 }}
+          className="font-display text-[#f36c21] select-none"
+          style={{ fontSize: "clamp(4rem, 20vw, 22rem)", opacity: 0.02 }}
         >
           RESULTS
         </span>
       </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6">
+      <div className="relative z-10 max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="mb-20 text-center"
+          className="mb-12 md:mb-16 lg:mb-20 text-center"
         >
           <span className="text-[11px] tracking-[0.25em] uppercase text-[#f36c21] font-medium mb-4 block">
             By the numbers
           </span>
-          <h2 className="font-display text-5xl md:text-6xl lg:text-8xl text-[#f5f1ea] leading-tight">
+          <h2 className="font-display text-[clamp(2rem,6vw,6rem)] text-[#f5f1ea] leading-tight">
             THE PROOF IS IN THE
             <br />
             <span className="text-[#f36c21]">PIPELINE</span>
@@ -96,7 +96,7 @@ export default function ResultsSection() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.2 + i * 0.12, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-              className="relative bg-[#0a0a0a] p-10 flex flex-col gap-4 group hover:bg-[#0f0f0f] transition-colors duration-300"
+              className="relative bg-[#0a0a0a] p-6 md:p-8 lg:p-10 flex flex-col gap-4 group hover:bg-[#0f0f0f] transition-colors duration-300"
             >
               {/* Hover orange glow */}
               <motion.div
@@ -106,7 +106,7 @@ export default function ResultsSection() {
                 style={{ background: "radial-gradient(circle at 50% 100%, rgba(243,108,33,0.08) 0%, transparent 70%)" }}
               />
 
-              <div className="font-display text-6xl md:text-7xl text-[#f36c21] leading-none orange-text-glow">
+              <div className="font-display text-[clamp(2.5rem,5vw,4.5rem)] text-[#f36c21] leading-none orange-text-glow">
                 {isInView && (
                   <AnimatedCounter
                     to={stat.value}
