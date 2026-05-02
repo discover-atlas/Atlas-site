@@ -2,12 +2,7 @@
 
 import React from "react";
 import { motion, useReducedMotion } from "motion/react";
-import {
-  FacebookIcon,
-  InstagramIcon,
-  YoutubeIcon,
-  LinkedinIcon,
-} from "lucide-react";
+import { ExternalLink } from "lucide-react";
 
 /* ── Link definitions ── */
 const footerLinks = [
@@ -42,10 +37,10 @@ const footerLinks = [
   {
     title: "Follow",
     links: [
-      { name: "LinkedIn", href: "#", icon: LinkedinIcon },
-      { name: "Instagram", href: "#", icon: InstagramIcon },
-      { name: "YouTube", href: "#", icon: YoutubeIcon },
-      { name: "Facebook", href: "#", icon: FacebookIcon },
+      { name: "LinkedIn", href: "#" },
+      { name: "Instagram", href: "#" },
+      { name: "YouTube", href: "#" },
+      { name: "Facebook", href: "#" },
     ],
   },
 ];
@@ -121,17 +116,17 @@ export function Footer() {
               </span>
               <ul className="flex flex-col gap-2">
                 {section.links.map((link) => {
-                  const Icon = "icon" in link ? link.icon : null;
+                  const isExternal = link.href.startsWith("http");
                   return (
                     <li key={link.name}>
                       <a
                         href={link.href}
-                        target={link.href.startsWith("http") ? "_blank" : undefined}
-                        rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                        target={isExternal ? "_blank" : undefined}
+                        rel={isExternal ? "noopener noreferrer" : undefined}
                         className="group flex items-center gap-2 text-xs text-[#f0ede8]/40 hover:text-[#f0ede8] transition-colors duration-200"
                       >
-                        {Icon && (
-                          <Icon className="w-3.5 h-3.5 text-[#f0ede8]/20 group-hover:text-[#f36c21] transition-colors duration-200" />
+                        {isExternal && (
+                          <ExternalLink className="w-3 h-3 text-[#f0ede8]/20 group-hover:text-[#f36c21] transition-colors duration-200 shrink-0" />
                         )}
                         <span className="relative">
                           {link.name}
