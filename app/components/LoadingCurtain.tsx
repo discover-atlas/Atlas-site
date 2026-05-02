@@ -38,25 +38,22 @@ export default function LoadingCurtain() {
               transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
               className="text-center"
             >
-              <div className="font-display text-4xl md:text-5xl tracking-widest text-white mb-1">
+              <div className="font-display text-4xl md:text-6xl tracking-[0.1em] text-[#f0ede8] mb-1">
                 ATLAS
-              </div>
-              <div className="font-display text-4xl md:text-5xl tracking-widest text-[#f36c21]">
-                LEADS
               </div>
               <motion.div
                 initial={{ scaleX: 0 }}
                 animate={{ scaleX: 1 }}
-                transition={{ delay: 0.5, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-                className="h-px bg-[#f36c21] mt-3 origin-left"
+                transition={{ delay: 0.4, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                className="h-px bg-[#f36c21] mt-3 origin-left opacity-50"
               />
               <motion.p
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 0.8 }}
-                className="text-[#f5f1ea]/40 text-xs tracking-[0.3em] mt-2 uppercase"
+                transition={{ delay: 0.7 }}
+                className="text-[#f0ede8]/30 text-[9px] tracking-[0.35em] mt-2.5 uppercase"
               >
-                Loading
+                Automation Consulting
               </motion.p>
             </motion.div>
           </div>

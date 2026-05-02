@@ -2,7 +2,21 @@
   "permissions": {
     "allow": [
       "PowerShell(Stop-Process *)",
-      "Bash(npx next *)"
+      "Bash(npx next *)",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\Drikus\\\\OneDrive\\\\Desktop\\\\atlas-leads\" -Force)",
+      "Bash(Select-Object Name, PSIsContainer)",
+      "Bash(Format-Table -AutoSize)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\Drikus\\\\OneDrive\\\\Desktop\\\\atlas-leads\" -Force | Select-Object Name, @{Name=\"Type\";Expression={if\\($_.PSIsContainer\\){\"Dir\"}else{\"File\"}}} | Format-Table -AutoSize)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\Drikus\\\\OneDrive\\\\Desktop\\\\atlas-leads\\\\app\" -Recurse -Force | Select-Object FullName, @{Name=\"Type\";Expression={if\\($_.PSIsContainer\\){\"Dir\"}else{\"File\"}}} | Sort-Object FullName)",
+      "Bash(npm install *)",
+      "Bash(npx tsc *)",
+      "Bash(npm run *)",
+      "Bash(curl -s http://localhost:3000)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)",
+      "Bash(node -e \"const p = require\\('./package.json'\\); console.log\\(JSON.stringify\\({motion: p.dependencies.motion, lucide: p.dependencies['lucide-react'], cva: p.dependencies['class-variance-authority']}, null, 2\\)\\)\")",
+      "Bash(node -e \"const p = require\\('./package.json'\\); const deps = {...p.dependencies, ...p.devDependencies}; ['framer-motion','motion','@radix-ui/react-slot','class-variance-authority','lucide-react'].forEach\\(d => console.log\\(d+':', deps[d] || 'MISSING'\\)\\)\")",
+      "Bash(node -e \"const p=require\\('./package.json'\\); ['motion','lucide-react'].forEach\\(d=>console.log\\(d+':',p.dependencies[d]||'MISSING'\\)\\)\")",
+      "Bash(git add *)"
     ]
   }
 }

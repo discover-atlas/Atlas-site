@@ -1,16 +1,13 @@
 import CustomCursor from "./components/CustomCursor";
 import LoadingCurtain from "./components/LoadingCurtain";
 import ScrollProgress from "./components/ScrollProgress";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import TrustStrip from "./components/TrustStrip";
-import ProblemSection from "./components/ProblemSection";
+import NavHeader from "@/components/ui/nav-header";
+import { PremiumHero } from "@/components/ui/hero";
 import ServicesSection from "./components/ServicesSection";
+import AnimatedSocialMediaSection from "./components/AnimatedSocialMediaSection";
 import ProcessSection from "./components/ProcessSection";
-import ResultsSection from "./components/ResultsSection";
-import IndustriesSection from "./components/IndustriesSection";
-import CTASection from "./components/CTASection";
-import Footer from "./components/Footer";
+import ModernBackgroundPaths from "@/components/ui/modern-background-paths";
+import { Footer } from "@/components/ui/footer-section";
 
 export default function Home() {
   return (
@@ -20,18 +17,18 @@ export default function Home() {
       <LoadingCurtain />
       <ScrollProgress />
 
+      {/* Navigation */}
+      <NavHeader />
+
       {/* Page */}
-      <Navbar />
       <main>
-        <Hero />
-        <TrustStrip />
-        <ProblemSection />
+        <PremiumHero />
         <ServicesSection />
+        <AnimatedSocialMediaSection />
         <ProcessSection />
-        <ResultsSection />
-        <IndustriesSection />
-        <CTASection />
+        <ModernBackgroundPaths title="Automate Everything" />
       </main>
+
       <Footer />
     </>
   );

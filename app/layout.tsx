@@ -16,11 +16,11 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Atlas Leads Agency — Web Design, SEO & Lead Generation for Home Services",
+  title: "Atlas — Automation Consulting",
   description:
-    "We build websites that book jobs. Web design, SEO and automated lead systems for HVAC, plumbing, electrical, roofing, landscaping and more.",
+    "We build automation systems that eliminate repetitive work, capture every lead, and scale your business without scaling headcount.",
   keywords:
-    "home services web design, HVAC leads, plumbing SEO, roofing digital marketing, lead generation home services",
+    "automation consulting, workflow automation, AI integration, business automation, CRM automation, lead generation systems",
 };
 
 export default function RootLayout({
@@ -28,7 +28,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${anton.variable} ${inter.variable}`}>
-      <body className="bg-[#0a0a0a] text-[#f5f1ea] overflow-x-hidden antialiased">
+      <body className="bg-[#0a0a0a] text-[#f0ede8] overflow-x-hidden antialiased">
         <div className="film-grain" aria-hidden="true" />
         {children}
       </body>
