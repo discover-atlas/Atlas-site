@@ -262,7 +262,7 @@ class PointerHandler {
 ───────────────────────────────────────────────── */
 function useShaderBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const rafRef    = useRef<number>();
+  const rafRef    = useRef<number | undefined>(undefined);
   const renderer  = useRef<WebGLRenderer | null>(null);
   const handler   = useRef<PointerHandler | null>(null);
 
