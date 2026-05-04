@@ -2,7 +2,7 @@ import CustomCursor from "./components/CustomCursor";
 import LoadingCurtain from "./components/LoadingCurtain";
 import ScrollProgress from "./components/ScrollProgress";
 import NavHeader from "@/components/ui/nav-header";
-import { Hero } from "@/components/ui/lamp-hero";
+import HeroGeometric from "@/components/ui/modern-hero-section";
 import ServicesSection from "./components/ServicesSection";
 import AnimatedSocialMediaSection from "./components/AnimatedSocialMediaSection";
 import ProcessSection from "./components/ProcessSection";
@@ -22,22 +22,7 @@ export default function Home() {
 
       {/* Page */}
       <main>
-        <Hero
-          title={<>Automate<br /><span className="text-[#f0ede8]/18">Everything.</span></>}
-          subtitle="We build systems that replace repetitive work, capture every lead, and scale your business — without scaling headcount."
-          actions={[
-            {
-              label: "Book a Strategy Call",
-              href: "https://calendly.com/drikusbisschoff/al-agency-discovery-call",
-              variant: "default",
-            },
-            {
-              label: "See Our Work",
-              href: "#services",
-              variant: "outline",
-            },
-          ]}
-        />
+        <HeroGeometric />
         <ServicesSection />
         <AnimatedSocialMediaSection />
         <ProcessSection />
