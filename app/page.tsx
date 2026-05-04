@@ -7,7 +7,7 @@ import ServicesSection from "./components/ServicesSection";
 import { Gallery6 } from "@/components/ui/gallery6";
 import AnimatedSocialMediaSection from "./components/AnimatedSocialMediaSection";
 import ProcessSection from "./components/ProcessSection";
-import ModernBackgroundPaths from "@/components/ui/modern-background-paths";
+import CTASection from "@/components/ui/cta-section";
 import { Footer } from "@/components/ui/footer-section";
 
 export default function Home() {
@@ -28,7 +28,7 @@ export default function Home() {
         <Gallery6 />
         <AnimatedSocialMediaSection />
         <ProcessSection />
-        <ModernBackgroundPaths title="Automate Everything" />
+        <CTASection />
       </main>
 
       <Footer />
