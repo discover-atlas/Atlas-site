@@ -302,7 +302,7 @@ export default function EnhancedBackgroundPaths({
             transition={{ delay: 0.5, duration: 0.8 }}
             className="text-[10px] tracking-[0.3em] uppercase text-[#f36c21] font-medium"
           >
-            Free Strategy Session
+            Ready to grow?
           </motion.span>
 
           {/* Letter-by-letter animated title */}
@@ -376,7 +376,7 @@ export default function EnhancedBackgroundPaths({
                     transition={{ type: "spring", stiffness: 400, damping: 10 }}
                   >
                     <PhoneCall className="w-4 h-4 text-[#f36c21]" />
-                    Book a Free Strategy Session
+                    Book a Strategy Call
                     <motion.span
                       animate={{ x: [0, 4, 0] }}
                       transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}

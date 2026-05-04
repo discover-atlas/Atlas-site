@@ -15,7 +15,7 @@ export function FeatureCard({ feature, className, ...props }: FeatureCardProps) 
   const p = genRandomPattern();
 
   return (
-    <div className={cn("relative overflow-hidden p-6", className)} {...props}>
+    <div className={cn("relative overflow-hidden p-8 md:p-10", className)} {...props}>
       {/* Decorative grid pattern background */}
       <div className="pointer-events-none absolute top-0 left-1/2 -mt-2 -ml-20 h-full w-full [mask-image:linear-gradient(white,transparent)]">
         <div className="from-foreground/5 to-foreground/1 absolute inset-0 bg-gradient-to-r [mask-image:radial-gradient(farthest-side_at_top,white,transparent)] opacity-100">

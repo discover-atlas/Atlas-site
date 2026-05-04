@@ -45,28 +45,25 @@ export default function CustomCursor() {
 
   return (
     <>
-      {/* Inner dot */}
+      {/* 6px white dot */}
       <motion.div
         style={{ x: dotX, y: dotY }}
         animate={{ scale: isHovering ? 0 : 1, opacity: 1 }}
         transition={{ scale: { type: "spring", stiffness: 600, damping: 30 } }}
-        className="pointer-events-none fixed left-0 top-0 z-[99999] h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#f36c21]"
+        className="pointer-events-none fixed left-0 top-0 z-[99999] h-[6px] w-[6px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white"
       />
 
-      {/* Outer ring */}
+      {/* 24px transparent ring — springs behind cursor */}
       <motion.div
         style={{ x: ringX, y: ringY }}
         animate={{
           scale: isHovering ? 2.2 : 1,
-          backgroundColor: isHovering
-            ? "rgba(243,108,33,0.12)"
-            : "transparent",
           borderColor: isHovering
-            ? "rgba(243,108,33,0.8)"
-            : "rgba(243,108,33,0.5)",
+            ? "rgba(255,255,255,0.5)"
+            : "rgba(255,255,255,0.3)",
         }}
         transition={{ type: "spring", stiffness: 300, damping: 28 }}
-        className="pointer-events-none fixed left-0 top-0 z-[99998] h-10 w-10 -translate-x-1/2 -translate-y-1/2 rounded-full border"
+        className="pointer-events-none fixed left-0 top-0 z-[99998] h-[24px] w-[24px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/30"
       />
     </>
   );

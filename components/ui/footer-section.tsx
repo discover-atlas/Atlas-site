@@ -9,38 +9,20 @@ const footerLinks = [
   {
     title: "Services",
     links: [
-      { name: "Workflow Automation", href: "#services" },
-      { name: "AI Integration", href: "#services" },
-      { name: "Lead Generation", href: "#services" },
-      { name: "CRM & Sales Automation", href: "#services" },
-      { name: "Analytics & Reporting", href: "#services" },
-      { name: "Custom AI Tools", href: "#services" },
+      { name: "Services", href: "#services" },
     ],
   },
   {
     title: "Company",
     links: [
       { name: "About", href: "#" },
-      { name: "Process", href: "#process" },
-      { name: "Case Studies", href: "#" },
-      { name: "Blog", href: "#" },
     ],
   },
   {
     title: "Get Started",
     links: [
+      { name: "Contact", href: "#contact" },
       { name: "Book a Strategy Call", href: "https://calendly.com/drikusbisschoff/al-agency-discovery-call" },
-      { name: "Free ROI Mapping", href: "https://calendly.com/drikusbisschoff/al-agency-discovery-call" },
-      { name: "Contact Us", href: "#contact" },
-    ],
-  },
-  {
-    title: "Follow",
-    links: [
-      { name: "LinkedIn", href: "#" },
-      { name: "Instagram", href: "#" },
-      { name: "YouTube", href: "#" },
-      { name: "Facebook", href: "#" },
     ],
   },
 ];
@@ -91,7 +73,7 @@ export function Footer() {
 
       <div className="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 pt-16 pb-10">
         {/* Top row: logo + links */}
-        <AnimatedContainer className="grid grid-cols-2 gap-10 sm:grid-cols-3 md:grid-cols-5 mb-14">
+        <AnimatedContainer className="grid grid-cols-2 gap-10 sm:grid-cols-3 md:grid-cols-4 mb-14">
           {/* Brand column */}
           <div className="col-span-2 sm:col-span-3 md:col-span-1 flex flex-col gap-4">
             <span

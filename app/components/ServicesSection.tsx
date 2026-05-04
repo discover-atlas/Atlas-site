@@ -2,46 +2,46 @@
 
 import React from "react";
 import { motion, useReducedMotion } from "motion/react";
-import { Zap, Cpu, Target, Users, BarChart2, Sparkles } from "lucide-react";
+import { Globe, Search, Target, CalendarCheck, Zap, Video } from "lucide-react";
 import { FeatureCard, type FeatureType } from "@/components/ui/grid-feature-cards";
 
 /* ── Service definitions ── */
 const services: FeatureType[] = [
   {
-    title: "Workflow Automation",
-    icon: Zap,
+    title: "Web Design and Development",
+    icon: Globe,
     description:
-      "Eliminate repetitive manual tasks. We map your processes and build automations that execute flawlessly, 24 hours a day.",
+      "High performance websites built to convert visitors into booked jobs. Every page engineered for speed, trust, and action.",
   },
   {
-    title: "AI Integration",
-    icon: Cpu,
+    title: "SEO and Local Rankings",
+    icon: Search,
     description:
-      "Connect your tools to GPT-powered systems that classify, respond, and decide — without a human in the loop.",
+      "Dominate Google searches in your area. We handle on-page optimisation, local citations, and Google Business Profile so you rank when it matters.",
   },
   {
-    title: "Lead Generation Systems",
+    title: "Lead Generation Engine",
     icon: Target,
     description:
-      "Multi-channel lead capture, automated qualification, and instant routing — every prospect handled from first touch to booked call.",
+      "Capture every lead from calls, forms, and Google automatically. Real-time qualification and routing so no prospect slips through.",
   },
   {
-    title: "CRM & Sales Automation",
-    icon: Users,
+    title: "CRM and Booking System",
+    icon: CalendarCheck,
     description:
-      "Automated follow-up sequences, pipeline management, and appointment booking — so no deal falls through the cracks.",
+      "Track leads, schedule jobs, and never miss a follow-up. Your pipeline stays visible, your calendar stays full.",
   },
   {
-    title: "Analytics & Reporting",
-    icon: BarChart2,
+    title: "System Automations",
+    icon: Zap,
     description:
-      "Real-time dashboards that surface the metrics that matter. Know what's working before the end-of-month review.",
+      "Automated SMS, email sequences, and workflow automations running 24/7 — from lead nurture to post-job review requests.",
   },
   {
-    title: "Custom AI Tools",
-    icon: Sparkles,
+    title: "Animated Social Media Content",
+    icon: Video,
     description:
-      "Purpose-built AI applications for your exact use case — from internal knowledge assistants to customer-facing chat.",
+      "Professional motion graphics and explainer videos for social media. Scroll-stopping content that builds trust and drives engagement.",
   },
 ];
 
@@ -79,7 +79,7 @@ function AnimatedContainer({
 /* ── Section ── */
 export default function ServicesSection() {
   return (
-    <section id="services" className="relative bg-[#0a0a0a] py-20 md:py-28 lg:py-36">
+    <section id="services" className="relative bg-[#0a0a0a] py-32 md:py-40 lg:py-48">
       {/* Subtle top accent line */}
       <div
         className="absolute top-0 left-0 right-0 h-px pointer-events-none"
@@ -89,7 +89,7 @@ export default function ServicesSection() {
         }}
       />
 
-      <div className="mx-auto w-full max-w-5xl space-y-12 px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto w-full max-w-6xl space-y-16 px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <AnimatedContainer className="max-w-xl">
           <span className="text-[10px] tracking-[0.28em] uppercase text-[#f36c21] font-medium mb-5 block">

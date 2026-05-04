@@ -123,13 +123,16 @@ export default function NavHeader() {
         />
 
         {/* Logo */}
-        <a href="#" className="relative z-10 flex flex-col leading-none group">
-          <span className="font-display text-lg tracking-[0.15em] text-[#f0ede8] group-hover:text-[#f36c21] transition-colors duration-300">
-            ATLAS
-          </span>
-          <span className="text-[9px] tracking-[0.28em] text-[#f0ede8]/30 uppercase mt-0.5">
-            Automation Consulting
-          </span>
+        <a href="#" className="relative z-10 flex items-center gap-3 group" aria-label="Atlas Leads home">
+          {/* Two overlapping hexagons */}
+          <svg width="38" height="24" viewBox="0 0 38 24" fill="none" aria-hidden="true" className="shrink-0">
+            <polygon points="22,12 17,3 7,3 2,12 7,21 17,21" fill="#f36c21" />
+            <polygon points="36,12 31,3 21,3 16,12 21,21 31,21" fill="#f36c21" fillOpacity="0.72" stroke="#0a0a0a" strokeWidth="0.75" />
+          </svg>
+          <div className="flex flex-col leading-none select-none">
+            <span className="font-display text-[15px] tracking-[0.14em] text-white font-bold">ATLAS</span>
+            <span className="text-[9px] tracking-[0.22em] text-[#f36c21] uppercase font-medium mt-0.5">LEADS</span>
+          </div>
         </a>
 
         {/* Sliding pill nav — desktop only */}
