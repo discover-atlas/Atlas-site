@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useRef, useState } from "react";
 import { motion } from "motion/react";
@@ -115,13 +115,13 @@ export const PremiumHero = () => {
         beam.opacity * (0.8 + Math.sin(beam.pulse) * 0.4)
       );
 
-      /* Orange (#f36c21) instead of cyan */
+      /* Orange (#00C9C8) instead of cyan */
       const gradient = ctx.createLinearGradient(0, 0, 0, beam.length);
-      gradient.addColorStop(0, `rgba(243,108,33,0)`);
-      gradient.addColorStop(0.2, `rgba(243,108,33,${pulsingOpacity * 0.5})`);
-      gradient.addColorStop(0.5, `rgba(243,108,33,${pulsingOpacity})`);
-      gradient.addColorStop(0.8, `rgba(243,108,33,${pulsingOpacity * 0.5})`);
-      gradient.addColorStop(1, `rgba(243,108,33,0)`);
+      gradient.addColorStop(0, `rgba(0,201,200,0)`);
+      gradient.addColorStop(0.2, `rgba(0,201,200,${pulsingOpacity * 0.5})`);
+      gradient.addColorStop(0.5, `rgba(0,201,200,${pulsingOpacity})`);
+      gradient.addColorStop(0.8, `rgba(0,201,200,${pulsingOpacity * 0.5})`);
+      gradient.addColorStop(1, `rgba(0,201,200,0)`);
 
       ctx.fillStyle = gradient;
       ctx.filter = `blur(${2 + beam.layer * 2}px)`;
@@ -201,7 +201,7 @@ export const PremiumHero = () => {
               {autoTitles.map((title, index) => (
                 <motion.span
                   key={index}
-                  className="absolute text-[#f36c21]"
+                  className="absolute text-[#00C9C8]"
                   initial={{ opacity: 0, y: "-100" }}
                   transition={{ type: "spring", stiffness: 50 }}
                   animate={
@@ -236,7 +236,7 @@ export const PremiumHero = () => {
             </Button>
             <Button
               size="sm"
-              className="gap-3 bg-[#f36c21] text-black hover:bg-[#ff7a2f] border-0"
+              className="gap-3 bg-[#00C9C8] text-black hover:bg-[#00b3b2] border-0"
               asChild
             >
               <a

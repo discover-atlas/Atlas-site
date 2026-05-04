@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion, type Variants } from "framer-motion";
 import { cn } from "@/lib/utils";
@@ -46,9 +46,9 @@ function ElegantShape({
             "bg-gradient-to-r to-transparent",
             gradient,
             "backdrop-blur-[2px] border-2 border-white/[0.12]",
-            "shadow-[0_8px_32px_0_rgba(243,108,33,0.08)]",
+            "shadow-[0_8px_32px_0_rgba(0,201,200,0.08)]",
             "after:absolute after:inset-0 after:rounded-full",
-            "after:bg-[radial-gradient(circle_at_50%_50%,rgba(243,108,33,0.12),transparent_70%)]",
+            "after:bg-[radial-gradient(circle_at_50%_50%,rgba(0,201,200,0.12),transparent_70%)]",
           )}
         />
       </motion.div>
@@ -95,7 +95,7 @@ export default function HeroGeometric({
     <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-[#0a0a0a]">
 
       {/* Background glow */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#f36c21]/[0.04] via-transparent to-orange-400/[0.04] blur-3xl" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#00C9C8]/[0.04] via-transparent to-[#00b3b2]/[0.04] blur-3xl" />
 
       {/* Floating shapes */}
       <div className="absolute inset-0 overflow-hidden">
@@ -104,7 +104,7 @@ export default function HeroGeometric({
           width={600}
           height={140}
           rotate={12}
-          gradient="from-[#f36c21]/[0.12]"
+          gradient="from-[#00C9C8]/[0.12]"
           className="left-[-10%] md:left-[-5%] top-[15%] md:top-[20%]"
         />
         <ElegantShape
@@ -112,7 +112,7 @@ export default function HeroGeometric({
           width={500}
           height={120}
           rotate={-15}
-          gradient="from-orange-400/[0.10]"
+          gradient="from-[#00C9C8]/[0.10]"
           className="right-[-5%] md:right-[0%] top-[70%] md:top-[75%]"
         />
         <ElegantShape
@@ -120,7 +120,7 @@ export default function HeroGeometric({
           width={300}
           height={80}
           rotate={-8}
-          gradient="from-amber-500/[0.10]"
+          gradient="from-[#00C9C8]/[0.10]"
           className="left-[5%] md:left-[10%] bottom-[5%] md:bottom-[10%]"
         />
         <ElegantShape
@@ -128,7 +128,7 @@ export default function HeroGeometric({
           width={200}
           height={60}
           rotate={20}
-          gradient="from-[#f36c21]/[0.08]"
+          gradient="from-[#00C9C8]/[0.08]"
           className="right-[15%] md:right-[20%] top-[10%] md:top-[15%]"
         />
         <ElegantShape
@@ -136,7 +136,7 @@ export default function HeroGeometric({
           width={150}
           height={40}
           rotate={-25}
-          gradient="from-yellow-500/[0.08]"
+          gradient="from-[#00C9C8]/[0.08]"
           className="left-[20%] md:left-[25%] top-[5%] md:top-[10%]"
         />
       </div>
@@ -153,7 +153,7 @@ export default function HeroGeometric({
             animate="visible"
             className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/[0.03] border border-white/[0.08] mb-8 md:mb-12"
           >
-            <Zap className="w-3.5 h-3.5 text-[#f36c21]" />
+            <Zap className="w-3.5 h-3.5 text-[#00C9C8]" />
             <span className="text-[11px] tracking-[0.2em] uppercase text-white/50 font-medium">
               {badge}
             </span>
@@ -169,7 +169,7 @@ export default function HeroGeometric({
                 {title1}
               </span>
               <br />
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#f36c21] via-[#f0ede8]/90 to-orange-300">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#00C9C8] via-[#f0ede8]/90 to-[#00b3b2]">
                 {title2}
               </span>
             </h1>
@@ -194,7 +194,7 @@ export default function HeroGeometric({
               href={ctaHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center gap-3 rounded-full bg-[#f36c21] px-8 py-3.5 text-[13px] font-medium text-white tracking-wide hover:bg-[#ff7a2f] transition-all duration-300 hover:shadow-[0_0_40px_rgba(243,108,33,0.35)] hover:-translate-y-0.5"
+              className="group inline-flex items-center gap-3 rounded-full bg-[#00C9C8] px-8 py-3.5 text-[13px] font-medium text-white tracking-wide hover:bg-[#00b3b2] transition-all duration-300 hover:shadow-[0_0_40px_rgba(0,201,200,0.35)] hover:-translate-y-0.5"
             >
               <PhoneCall className="w-4 h-4 shrink-0" />
               {ctaText}

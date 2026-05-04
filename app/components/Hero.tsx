@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -26,8 +26,8 @@ const notifications = [
 ];
 
 const blobs = [
-  { size: 600, x: [-40, 30, -60], y: [-30, 40, -20], duration: 9, opacity: 0.22, color: "#f36c21" },
-  { size: 420, x: [60, -40, 90], y: [40, -60, 30], duration: 13, opacity: 0.12, color: "#f36c21" },
+  { size: 600, x: [-40, 30, -60], y: [-30, 40, -20], duration: 9, opacity: 0.22, color: "#00C9C8" },
+  { size: 420, x: [60, -40, 90], y: [40, -60, 30], duration: 13, opacity: 0.12, color: "#00C9C8" },
   { size: 340, x: [-30, 80, -50], y: [70, -30, 100], duration: 11, opacity: 0.08, color: "#ff8c42" },
 ];
 
@@ -98,11 +98,11 @@ export default function Hero() {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 1.9 }}
           className="mb-8 flex items-center gap-3"
         >
-          <span className="h-px w-8 bg-[#f36c21]" />
+          <span className="h-px w-8 bg-[#00C9C8]" />
           <span className="text-xs tracking-[0.25em] text-[#f5f1ea]/50 uppercase">
             Digital Growth Partner
           </span>
-          <span className="h-px w-8 bg-[#f36c21]" />
+          <span className="h-px w-8 bg-[#00C9C8]" />
         </motion.div>
 
         {/* Headline — word by word */}
@@ -118,7 +118,7 @@ export default function Hero() {
                       initial="hidden"
                       animate="visible"
                       variants={wordVariants}
-                      className={`inline-block ${line.orange ? "text-[#f36c21]" : "text-[#f5f1ea]"}`}
+                      className={`inline-block ${line.orange ? "text-[#00C9C8]" : "text-[#f5f1ea]"}`}
                     >
                       {word}
                     </motion.span>
@@ -134,7 +134,7 @@ export default function Hero() {
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
           transition={{ delay: 2.9, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="h-1 bg-[#f36c21] rounded-full origin-left mb-10"
+          className="h-1 bg-[#00C9C8] rounded-full origin-left mb-10"
           style={{ width: "clamp(140px, 20vw, 300px)" }}
         />
 
@@ -160,7 +160,7 @@ export default function Hero() {
             href="https://calendly.com/drikusbisschoff/al-agency-discovery-call"
             className="rounded-full"
           >
-            <span className="group inline-flex items-center gap-3 rounded-full bg-[#f36c21] px-8 py-4 text-base font-semibold text-black tracking-wide orange-glow transition-all duration-300 hover:bg-[#ff7a2f] hover:shadow-[0_0_50px_rgba(243,108,33,0.6)]">
+            <span className="group inline-flex items-center gap-3 rounded-full bg-[#00C9C8] px-8 py-4 text-base font-semibold text-black tracking-wide orange-glow transition-all duration-300 hover:bg-[#00b3b2] hover:shadow-[0_0_50px_rgba(0,201,200,0.6)]">
               Book a Free Strategy Call
               <motion.svg
                 width="18"
@@ -185,7 +185,7 @@ export default function Hero() {
             onClick={() => document.querySelector("#services")?.scrollIntoView({ behavior: "smooth" })}
             className="rounded-full"
           >
-            <span className="inline-flex items-center gap-2 rounded-full border border-[#f5f1ea]/20 px-8 py-4 text-base font-semibold text-[#f5f1ea]/70 tracking-wide transition-all duration-300 hover:border-[#f36c21]/50 hover:text-[#f5f1ea] hover:bg-white/5">
+            <span className="inline-flex items-center gap-2 rounded-full border border-[#f5f1ea]/20 px-8 py-4 text-base font-semibold text-[#f5f1ea]/70 tracking-wide transition-all duration-300 hover:border-[#00C9C8]/50 hover:text-[#f5f1ea] hover:bg-white/5">
               See Our Work
             </span>
           </MagneticButton>
@@ -224,13 +224,13 @@ export default function Hero() {
               <div>
                 <p className="text-sm font-semibold text-[#f5f1ea]">{notif.title}</p>
                 <p className="text-xs text-[#f5f1ea]/40 mt-0.5">{notif.detail}</p>
-                <p className="text-[10px] text-[#f36c21] mt-1">{notif.time}</p>
+                <p className="text-[10px] text-[#00C9C8] mt-1">{notif.time}</p>
               </div>
             </div>
             {/* Pulse dot */}
             <span className="absolute top-3 right-3 flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#f36c21] opacity-75" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-[#f36c21]" />
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#00C9C8] opacity-75" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-[#00C9C8]" />
             </span>
           </motion.div>
         ))}
@@ -247,7 +247,7 @@ export default function Hero() {
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-          className="h-8 w-px bg-gradient-to-b from-[#f36c21] to-transparent"
+          className="h-8 w-px bg-gradient-to-b from-[#00C9C8] to-transparent"
         />
       </motion.div>
     </section>

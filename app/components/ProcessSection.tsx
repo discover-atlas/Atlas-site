@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useRef } from "react";
 import { motion, useInView, type Variants } from "framer-motion";
@@ -102,7 +102,7 @@ function StepCard({ step, index }: { step: typeof steps[0]; index: number }) {
 
       {/* Step number + icon */}
       <div className="flex items-center justify-between">
-        <span className="text-[10px] tracking-[0.22em] uppercase text-[#f36c21] font-medium">
+        <span className="text-[10px] tracking-[0.22em] uppercase text-[#00C9C8] font-medium">
           Step {step.number}
         </span>
         <div className="text-[#f0ede8]/30">{step.icon}</div>
@@ -111,7 +111,7 @@ function StepCard({ step, index }: { step: typeof steps[0]; index: number }) {
       {/* Title */}
       <div>
         <h3 className="font-display text-2xl text-[#f0ede8] mb-1">{step.title}</h3>
-        <p className="font-display text-lg text-[#f36c21]/70 leading-tight whitespace-pre-line">
+        <p className="font-display text-lg text-[#00C9C8]/70 leading-tight whitespace-pre-line">
           {step.headline}
         </p>
       </div>
@@ -124,7 +124,7 @@ function StepCard({ step, index }: { step: typeof steps[0]; index: number }) {
         initial={{ scaleX: 0 }}
         animate={isInView ? { scaleX: 1 } : {}}
         transition={{ delay: 0.5 + index * 0.1, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-        className="h-px bg-[#f36c21] origin-left opacity-20"
+        className="h-px bg-[#00C9C8] origin-left opacity-20"
       />
     </motion.div>
   );
@@ -141,7 +141,7 @@ export default function ProcessSection() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse 60% 50% at 0% 50%, rgba(243,108,33,0.03) 0%, transparent 60%)",
+            "radial-gradient(ellipse 60% 50% at 0% 50%, rgba(0,201,200,0.03) 0%, transparent 60%)",
         }}
       />
 
@@ -156,7 +156,7 @@ export default function ProcessSection() {
               initial={{ opacity: 0, x: -20 }}
               animate={isHeaderInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.5 }}
-              className="text-[10px] tracking-[0.28em] uppercase text-[#f36c21] font-medium mb-5 block"
+              className="text-[10px] tracking-[0.28em] uppercase text-[#00C9C8] font-medium mb-5 block"
             >
               How we work
             </motion.span>

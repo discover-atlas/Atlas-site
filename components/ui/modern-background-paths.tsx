@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -249,7 +249,7 @@ export default function EnhancedBackgroundPaths({
       className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-[#0a0a0a]"
     >
       {/* ── Cycling background patterns ── */}
-      <div className="absolute inset-0 text-[#f36c21]">
+      <div className="absolute inset-0 text-[#00C9C8]">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentPattern}
@@ -275,7 +275,7 @@ export default function EnhancedBackgroundPaths({
             onClick={() => setCurrentPattern(i)}
             className={`w-2 h-2 rounded-full transition-colors duration-300 ${
               i === currentPattern
-                ? "bg-[#f36c21]"
+                ? "bg-[#00C9C8]"
                 : "bg-[#f0ede8]/20 hover:bg-[#f0ede8]/40"
             }`}
             animate={{
@@ -300,7 +300,7 @@ export default function EnhancedBackgroundPaths({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.8 }}
-            className="text-[10px] tracking-[0.3em] uppercase text-[#f36c21] font-medium"
+            className="text-[10px] tracking-[0.3em] uppercase text-[#00C9C8] font-medium"
           >
             Ready to grow?
           </motion.span>
@@ -324,8 +324,8 @@ export default function EnhancedBackgroundPaths({
                       damping: 20,
                     }}
                     className="inline-block text-transparent bg-clip-text
-                               bg-gradient-to-br from-[#f0ede8] via-[#f0ede8]/90 to-[#f36c21]
-                               hover:from-[#f36c21] hover:to-[#ff8c42]
+                               bg-gradient-to-br from-[#f0ede8] via-[#f0ede8]/90 to-[#00C9C8]
+                               hover:from-[#00C9C8] hover:to-[#ff8c42]
                                transition-all duration-500 cursor-default"
                     whileHover={{ scale: 1.06, y: -3 }}
                   >
@@ -354,14 +354,14 @@ export default function EnhancedBackgroundPaths({
             transition={{ delay: 1.4, duration: 0.8, type: "spring", stiffness: 100 }}
             className="inline-block group"
           >
-            <div className="relative p-[1.5px] bg-gradient-to-r from-[#f36c21] via-[#ff8c42] to-[#f36c21] rounded-2xl group-hover:from-[#ff7a2f] group-hover:to-[#ff7a2f] transition-all duration-300">
+            <div className="relative p-[1.5px] bg-gradient-to-r from-[#00C9C8] via-[#ff8c42] to-[#00C9C8] rounded-2xl group-hover:from-[#00b3b2] group-hover:to-[#00b3b2] transition-all duration-300">
               <Button
                 variant="ghost"
                 size="lg"
                 className="relative rounded-[14px] px-10 py-6 text-base font-semibold
                            bg-[#0a0a0a] hover:bg-[#111]
                            text-[#f0ede8] transition-all duration-300
-                           group-hover:-translate-y-0.5 group-hover:shadow-[0_8px_40px_rgba(243,108,33,0.3)]
+                           group-hover:-translate-y-0.5 group-hover:shadow-[0_8px_40px_rgba(0,201,200,0.3)]
                            border-0"
                 asChild
               >
@@ -375,7 +375,7 @@ export default function EnhancedBackgroundPaths({
                     whileHover={{ x: 2 }}
                     transition={{ type: "spring", stiffness: 400, damping: 10 }}
                   >
-                    <PhoneCall className="w-4 h-4 text-[#f36c21]" />
+                    <PhoneCall className="w-4 h-4 text-[#00C9C8]" />
                     Book a Strategy Call
                     <motion.span
                       animate={{ x: [0, 4, 0] }}
@@ -399,7 +399,7 @@ export default function EnhancedBackgroundPaths({
             {["20-min call", "100% free", "No obligation", "ROI mapping included"].map(
               (badge, i) => (
                 <div key={i} className="flex items-center gap-2">
-                  <span className="h-1 w-1 rounded-full bg-[#f36c21]/50" />
+                  <span className="h-1 w-1 rounded-full bg-[#00C9C8]/50" />
                   {badge}
                 </div>
               )
@@ -421,12 +421,12 @@ export default function EnhancedBackgroundPaths({
 
       {/* ── Floating accent blobs ── */}
       <motion.div
-        className="absolute top-1/4 left-1/4 w-5 h-5 bg-[#f36c21]/10 rounded-full blur-md pointer-events-none"
+        className="absolute top-1/4 left-1/4 w-5 h-5 bg-[#00C9C8]/10 rounded-full blur-md pointer-events-none"
         animate={{ y: [0, -20, 0], x: [0, 10, 0], scale: [1, 1.2, 1], opacity: [0.3, 0.6, 0.3] }}
         transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
-        className="absolute top-3/4 right-1/3 w-7 h-7 bg-[#f36c21]/8 rounded-full blur-md pointer-events-none"
+        className="absolute top-3/4 right-1/3 w-7 h-7 bg-[#00C9C8]/8 rounded-full blur-md pointer-events-none"
         animate={{ y: [0, 15, 0], x: [0, -15, 0], scale: [1, 0.8, 1], opacity: [0.4, 0.7, 0.4] }}
         transition={{ duration: 9, repeat: Infinity, ease: "easeInOut", delay: 2 }}
       />

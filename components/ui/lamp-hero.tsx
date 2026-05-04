@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import * as React from "react";
 import { motion } from "framer-motion";
@@ -30,9 +30,9 @@ interface HeroProps extends Omit<React.HTMLAttributes<HTMLElement>, "title"> {
    Lamp / conic-glow effect
    Note: conic gradients are fully inline-styled to
    avoid Tailwind v4 bg-gradient-conic incompatibility.
-   Primary colour: #f36c21 (Atlas Leads brand orange).
+   Primary colour: #00C9C8 (Atlas Leads brand orange).
 ───────────────────────────────────────────────── */
-const ORANGE = "rgba(243,108,33,";
+const ORANGE = "rgba(0,201,200,";
 
 const Hero = React.forwardRef<HTMLElement, HeroProps>(
   (
@@ -168,7 +168,7 @@ const Hero = React.forwardRef<HTMLElement, HeroProps>(
                     className={
                       action.variant === "outline"
                         ? "rounded-full border-[#f0ede8]/20 bg-transparent text-[#f0ede8]/60 hover:bg-white/5 hover:text-[#f0ede8] hover:border-[#f0ede8]/40 tracking-wide"
-                        : "rounded-full bg-[#f36c21] text-white hover:bg-[#ff7a2f] tracking-wide shadow-[0_0_32px_rgba(243,108,33,0.25)] hover:shadow-[0_0_48px_rgba(243,108,33,0.4)]"
+                        : "rounded-full bg-[#00C9C8] text-white hover:bg-[#00b3b2] tracking-wide shadow-[0_0_32px_rgba(0,201,200,0.25)] hover:shadow-[0_0_48px_rgba(0,201,200,0.4)]"
                     }
                     asChild
                   >

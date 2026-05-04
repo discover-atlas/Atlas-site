@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useCallback, useEffect } from "react";
 import { motion } from "framer-motion";
@@ -101,7 +101,7 @@ export function Gallery6() {
         className="absolute top-0 left-0 right-0 h-px pointer-events-none"
         style={{
           background:
-            "linear-gradient(90deg, transparent, rgba(243,108,33,0.15), transparent)",
+            "linear-gradient(90deg, transparent, rgba(0,201,200,0.15), transparent)",
         }}
         aria-hidden="true"
       />
@@ -111,7 +111,7 @@ export function Gallery6() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse 60% 40% at 50% 0%, rgba(243,108,33,0.04) 0%, transparent 70%)",
+            "radial-gradient(ellipse 60% 40% at 50% 0%, rgba(0,201,200,0.04) 0%, transparent 70%)",
         }}
         aria-hidden="true"
       />
@@ -126,7 +126,7 @@ export function Gallery6() {
           className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-14 md:mb-20"
         >
           <div>
-            <span className="block text-[10px] tracking-[0.32em] uppercase text-[#f36c21] font-medium mb-5">
+            <span className="block text-[10px] tracking-[0.32em] uppercase text-[#00C9C8] font-medium mb-5">
               Client Results
             </span>
             <h2
@@ -146,7 +146,7 @@ export function Gallery6() {
                 onClick={() => api?.scrollPrev()}
                 aria-label="Previous result"
                 disabled={!canScrollPrev}
-                className="group w-11 h-11 rounded-full border border-[#f0ede8]/10 flex items-center justify-center hover:border-[#f36c21]/40 hover:bg-[#f36c21]/5 transition-all duration-300 disabled:opacity-30"
+                className="group w-11 h-11 rounded-full border border-[#f0ede8]/10 flex items-center justify-center hover:border-[#00C9C8]/40 hover:bg-[#00C9C8]/5 transition-all duration-300 disabled:opacity-30"
               >
                 <ArrowLeft className="w-4 h-4 text-[#f0ede8]/50 group-hover:text-[#f0ede8] transition-colors duration-200" />
               </button>
@@ -154,7 +154,7 @@ export function Gallery6() {
                 onClick={() => api?.scrollNext()}
                 aria-label="Next result"
                 disabled={!canScrollNext}
-                className="group w-11 h-11 rounded-full border border-[#f0ede8]/10 flex items-center justify-center hover:border-[#f36c21]/40 hover:bg-[#f36c21]/5 transition-all duration-300 disabled:opacity-30"
+                className="group w-11 h-11 rounded-full border border-[#f0ede8]/10 flex items-center justify-center hover:border-[#00C9C8]/40 hover:bg-[#00C9C8]/5 transition-all duration-300 disabled:opacity-30"
               >
                 <ArrowRight className="w-4 h-4 text-[#f0ede8]/50 group-hover:text-[#f0ede8] transition-colors duration-200" />
               </button>
@@ -165,7 +165,7 @@ export function Gallery6() {
               href="https://calendly.com/drikusbisschoff/al-agency-discovery-call"
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center gap-2.5 text-[11px] tracking-[0.22em] uppercase text-[#f0ede8]/40 hover:text-[#f36c21] transition-colors duration-300"
+              className="group inline-flex items-center gap-2.5 text-[11px] tracking-[0.22em] uppercase text-[#f0ede8]/40 hover:text-[#00C9C8] transition-colors duration-300"
             >
               Book a Demo
               <svg
@@ -206,7 +206,7 @@ export function Gallery6() {
                   key={item.id}
                   className="pl-5 md:pl-6 basis-[85vw] sm:basis-[60vw] md:basis-[44vw] lg:basis-[36vw] xl:basis-[30vw]"
                 >
-                  <Card className="group relative rounded-2xl overflow-hidden border border-[#f0ede8]/[0.06] bg-[#111] hover:border-[#f36c21]/20 transition-all duration-500 hover:-translate-y-1 shadow-none">
+                  <Card className="group relative rounded-2xl overflow-hidden border border-[#f0ede8]/[0.06] bg-[#111] hover:border-[#00C9C8]/20 transition-all duration-500 hover:-translate-y-1 shadow-none">
                     {/* Image */}
                     <div className="relative aspect-[4/3] overflow-hidden">
                       <img
@@ -226,8 +226,8 @@ export function Gallery6() {
                       />
                       {/* Tag badge */}
                       <div className="absolute top-4 left-4">
-                        <span className="inline-flex items-center gap-1.5 rounded-full bg-[#0a0a0a]/70 backdrop-blur-sm border border-[#f36c21]/25 px-3 py-1.5 text-[9px] tracking-[0.2em] uppercase text-[#f36c21] font-medium">
-                          <span className="h-1 w-1 rounded-full bg-[#f36c21]" aria-hidden="true" />
+                        <span className="inline-flex items-center gap-1.5 rounded-full bg-[#0a0a0a]/70 backdrop-blur-sm border border-[#00C9C8]/25 px-3 py-1.5 text-[9px] tracking-[0.2em] uppercase text-[#00C9C8] font-medium">
+                          <span className="h-1 w-1 rounded-full bg-[#00C9C8]" aria-hidden="true" />
                           {item.tag}
                         </span>
                       </div>
@@ -238,7 +238,7 @@ export function Gallery6() {
                       {/* Result number watermark */}
                       <div
                         className="absolute bottom-4 right-5 font-display text-[4.5rem] leading-none select-none pointer-events-none"
-                        style={{ color: "rgba(243,108,33,0.04)" }}
+                        style={{ color: "rgba(0,201,200,0.04)" }}
                         aria-hidden="true"
                       >
                         0{item.id}
@@ -255,7 +255,7 @@ export function Gallery6() {
                       </p>
 
                       {/* Bottom accent line */}
-                      <div className="mt-5 h-px w-0 bg-[#f36c21]/40 group-hover:w-full transition-all duration-500" aria-hidden="true" />
+                      <div className="mt-5 h-px w-0 bg-[#00C9C8]/40 group-hover:w-full transition-all duration-500" aria-hidden="true" />
                     </CardContent>
                   </Card>
                 </CarouselItem>
@@ -276,7 +276,7 @@ export function Gallery6() {
               <div
                 className={`rounded-full transition-all duration-300 ${
                   i === selectedIndex
-                    ? "w-6 h-[3px] bg-[#f36c21]"
+                    ? "w-6 h-[3px] bg-[#00C9C8]"
                     : "w-[3px] h-[3px] bg-[#f0ede8]/20 hover:bg-[#f0ede8]/40"
                 }`}
               />

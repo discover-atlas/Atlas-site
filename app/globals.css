@@ -1,16 +1,16 @@
-@import "tailwindcss";
+﻿@import "tailwindcss";
 
 @theme inline {
   /* ── Core palette ── */
   --color-background: #0a0a0a;
   --color-foreground: #f0ede8;
-  --color-orange: #f36c21;
-  --color-orange-dim: rgba(243, 108, 33, 0.25);
+  --color-orange: #00C9C8;
+  --color-orange-dim: rgba(0, 201, 200, 0.25);
   --color-dark: #111111;
   --color-gray-dark: #1a1a1a;
 
   /* ── shadcn/ui tokens ── */
-  --color-primary: #f36c21;
+  --color-primary: #00C9C8;
   --color-primary-foreground: #000000;
   --color-secondary: #111111;
   --color-secondary-foreground: #f0ede8;
@@ -22,7 +22,7 @@
   --color-destructive-foreground: #f0ede8;
   --color-border: rgba(240, 237, 232, 0.08);
   --color-input: rgba(240, 237, 232, 0.08);
-  --color-ring: #f36c21;
+  --color-ring: #00C9C8;
 
   /* ── Typography ── */
   --font-display: var(--font-anton);
@@ -91,17 +91,17 @@ body {
 /* ── Scrollbar ── */
 ::-webkit-scrollbar { width: 2px; }
 ::-webkit-scrollbar-track { background: #0a0a0a; }
-::-webkit-scrollbar-thumb { background: #f36c21; border-radius: 1px; }
+::-webkit-scrollbar-thumb { background: #00C9C8; border-radius: 1px; }
 
 /* ── Selection ── */
 ::selection {
-  background: #f36c21;
+  background: #00C9C8;
   color: #000;
 }
 
 /* ── Orange glow utility ── */
 .orange-glow {
-  box-shadow: 0 0 30px rgba(243, 108, 33, 0.35), 0 0 60px rgba(243, 108, 33, 0.15);
+  box-shadow: 0 0 30px rgba(0, 201, 200, 0.35), 0 0 60px rgba(0, 201, 200, 0.15);
 }
 
 /* ── Display font ── */
@@ -134,7 +134,7 @@ body {
   position: absolute;
   inset: -1px;
   border-radius: 1rem;
-  background: linear-gradient(135deg, rgba(243,108,33,0.3), transparent 50%, rgba(243,108,33,0.08));
+  background: linear-gradient(135deg, rgba(0,201,200,0.3), transparent 50%, rgba(0,201,200,0.08));
   z-index: -1;
 }
 

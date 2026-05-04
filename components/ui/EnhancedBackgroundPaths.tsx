@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { useId } from "react";
@@ -61,7 +61,7 @@ export default function EnhancedBackgroundPaths({
               {/* Animated traveling dot */}
               <motion.circle
                 r={i % 2 === 0 ? 2.5 : 1.8}
-                fill="#f36c21"
+                fill="#00C9C8"
                 fillOpacity={0.4}
                 initial={{ offsetDistance: "0%" }}
                 animate={{ offsetDistance: "100%" }}

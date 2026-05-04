@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -23,7 +23,7 @@ export default function LoadingCurtain() {
         >
           {/* Top orange accent strip */}
           <motion.div
-            className="absolute top-0 left-0 right-0 h-1 bg-[#f36c21]"
+            className="absolute top-0 left-0 right-0 h-1 bg-[#00C9C8]"
             initial={{ scaleX: 0, originX: 0 }}
             animate={{ scaleX: 1 }}
             transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
@@ -45,7 +45,7 @@ export default function LoadingCurtain() {
                 initial={{ scaleX: 0 }}
                 animate={{ scaleX: 1 }}
                 transition={{ delay: 0.4, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-                className="h-px bg-[#f36c21] mt-3 origin-left opacity-50"
+                className="h-px bg-[#00C9C8] mt-3 origin-left opacity-50"
               />
               <motion.p
                 initial={{ opacity: 0 }}
@@ -60,7 +60,7 @@ export default function LoadingCurtain() {
 
           {/* Bottom orange accent */}
           <motion.div
-            className="absolute bottom-0 left-0 right-0 h-1 bg-[#f36c21]/30"
+            className="absolute bottom-0 left-0 right-0 h-1 bg-[#00C9C8]/30"
             initial={{ scaleX: 0, originX: 0 }}
             animate={{ scaleX: 1 }}
             transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}

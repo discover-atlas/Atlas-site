@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 
@@ -9,7 +9,7 @@ function ExplainerPreview() {
       {bars.map((h, i) => (
         <motion.div
           key={i}
-          className="flex-1 rounded-sm bg-[#f36c21]/40"
+          className="flex-1 rounded-sm bg-[#00C9C8]/40"
           initial={{ scaleY: 0 }}
           whileInView={{ scaleY: h }}
           viewport={{ once: true }}
@@ -27,7 +27,7 @@ function MotionPreview() {
       <motion.div
         animate={{ rotate: 360 }}
         transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-        className="absolute w-10 h-10 rounded-sm border border-[#f36c21]/30"
+        className="absolute w-10 h-10 rounded-sm border border-[#00C9C8]/30"
         style={{ transformOrigin: "center" }}
       />
       <motion.div
@@ -38,7 +38,7 @@ function MotionPreview() {
       <motion.div
         animate={{ scale: [1, 1.3, 1] }}
         transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
-        className="w-2.5 h-2.5 rounded-full bg-[#f36c21]/60"
+        className="w-2.5 h-2.5 rounded-full bg-[#00C9C8]/60"
       />
     </div>
   );
@@ -50,9 +50,9 @@ function AdsPreview() {
       <motion.div
         animate={{ opacity: [0.3, 1, 0.3] }}
         transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
-        className="flex-1 h-8 rounded-lg bg-[#f36c21]/20 border border-[#f36c21]/20 flex items-center justify-center"
+        className="flex-1 h-8 rounded-lg bg-[#00C9C8]/20 border border-[#00C9C8]/20 flex items-center justify-center"
       >
-        <span className="text-[9px] text-[#f36c21]/60 tracking-widest uppercase font-medium">
+        <span className="text-[9px] text-[#00C9C8]/60 tracking-widest uppercase font-medium">
           Book Now
         </span>
       </motion.div>
@@ -88,11 +88,11 @@ function ReelsPreview() {
             transition={{ duration: 3, repeat: Infinity, delay: i * 0.8, ease: "easeInOut", repeatType: "reverse" }}
             className="absolute inset-0"
             style={{
-              background: `linear-gradient(to bottom, rgba(243,108,33,${0.1 + i * 0.05}) 0%, rgba(243,108,33,0.02) 100%)`,
+              background: `linear-gradient(to bottom, rgba(0,201,200,${0.1 + i * 0.05}) 0%, rgba(0,201,200,0.02) 100%)`,
             }}
           />
           <div className="absolute bottom-1 left-1 right-1 flex justify-center">
-            <div className="h-px w-3 bg-[#f36c21]/40 rounded-full" />
+            <div className="h-px w-3 bg-[#00C9C8]/40 rounded-full" />
           </div>
         </motion.div>
       ))}
@@ -144,7 +144,7 @@ export default function AnimatedSocialMediaSection() {
       <div
         className="absolute inset-0 pointer-events-none opacity-50"
         style={{
-          background: "radial-gradient(ellipse 50% 40% at 80% 50%, rgba(243,108,33,0.04) 0%, transparent 70%)",
+          background: "radial-gradient(ellipse 50% 40% at 80% 50%, rgba(0,201,200,0.04) 0%, transparent 70%)",
         }}
       />
 
@@ -158,9 +158,9 @@ export default function AnimatedSocialMediaSection() {
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             className="max-w-lg"
           >
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#f36c21]/25 px-3.5 py-1.5 mb-6">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#f36c21]" />
-              <span className="text-[10px] tracking-[0.22em] uppercase text-[#f36c21] font-medium">
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#00C9C8]/25 px-3.5 py-1.5 mb-6">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#00C9C8]" />
+              <span className="text-[10px] tracking-[0.22em] uppercase text-[#00C9C8] font-medium">
                 New Service
               </span>
             </div>
@@ -200,7 +200,7 @@ export default function AnimatedSocialMediaSection() {
               {/* Number watermark */}
               <div
                 className="absolute -top-2 -right-1 font-display text-[5rem] leading-none select-none pointer-events-none"
-                style={{ color: "rgba(243,108,33,0.04)" }}
+                style={{ color: "rgba(0,201,200,0.04)" }}
               >
                 {item.tag}
               </div>
@@ -209,7 +209,7 @@ export default function AnimatedSocialMediaSection() {
               <div className="relative z-10">{item.preview}</div>
 
               {/* Tag */}
-              <span className="text-[10px] tracking-[0.22em] uppercase text-[#f36c21]/60 font-medium">
+              <span className="text-[10px] tracking-[0.22em] uppercase text-[#00C9C8]/60 font-medium">
                 {item.tag} — {item.title}
               </span>
 
@@ -217,7 +217,7 @@ export default function AnimatedSocialMediaSection() {
               <p className="text-sm text-[#f0ede8]/40 leading-relaxed">{item.description}</p>
 
               {/* Hover line */}
-              <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#f36c21]/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#00C9C8]/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </motion.div>
           ))}
         </div>

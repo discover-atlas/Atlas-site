@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 
@@ -21,7 +21,7 @@ export default function IndustriesSection() {
       {/* Background */}
       <div
         className="absolute inset-0 pointer-events-none"
-        style={{ background: "radial-gradient(ellipse 80% 60% at 100% 50%, rgba(243,108,33,0.04) 0%, transparent 60%)" }}
+        style={{ background: "radial-gradient(ellipse 80% 60% at 100% 50%, rgba(0,201,200,0.04) 0%, transparent 60%)" }}
       />
 
       <div className="relative z-10 max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -33,13 +33,13 @@ export default function IndustriesSection() {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="mb-10 md:mb-14 lg:mb-16"
         >
-          <span className="text-[11px] tracking-[0.25em] uppercase text-[#f36c21] font-medium mb-4 block">
+          <span className="text-[11px] tracking-[0.25em] uppercase text-[#00C9C8] font-medium mb-4 block">
             Industries we serve
           </span>
           <h2 className="font-display text-[clamp(2.5rem,5.5vw,5rem)] text-[#f5f1ea] leading-tight">
             YOUR TRADE,
             <br />
-            <span className="text-[#f36c21]">OUR EXPERTISE</span>
+            <span className="text-[#00C9C8]">OUR EXPERTISE</span>
           </h2>
         </motion.div>
 
@@ -67,14 +67,14 @@ export default function IndustriesSection() {
               <motion.div
                 className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
                 style={{
-                  background: "radial-gradient(circle at 50% 60%, rgba(243,108,33,0.12) 0%, transparent 70%)",
+                  background: "radial-gradient(circle at 50% 60%, rgba(0,201,200,0.12) 0%, transparent 70%)",
                 }}
               />
 
               {/* Border glow on hover */}
               <motion.div
                 className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
-                style={{ boxShadow: "inset 0 0 0 1px rgba(243,108,33,0.4)" }}
+                style={{ boxShadow: "inset 0 0 0 1px rgba(0,201,200,0.4)" }}
               />
 
               {/* Icon */}
@@ -88,7 +88,7 @@ export default function IndustriesSection() {
 
               {/* Text */}
               <div>
-                <p className="font-display text-sm text-[#f5f1ea] group-hover:text-[#f36c21] transition-colors duration-300">
+                <p className="font-display text-sm text-[#f5f1ea] group-hover:text-[#00C9C8] transition-colors duration-300">
                   {industry.name.toUpperCase()}
                 </p>
                 <p className="text-[11px] text-[#f5f1ea]/35 mt-0.5">{industry.desc}</p>
@@ -110,7 +110,7 @@ export default function IndustriesSection() {
             href="https://calendly.com/drikusbisschoff/al-agency-discovery-call"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#f36c21] hover:underline underline-offset-4"
+            className="text-[#00C9C8] hover:underline underline-offset-4"
           >
             Book a call anyway →
           </a>

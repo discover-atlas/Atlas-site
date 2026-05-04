@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useScroll, useSpring, motion } from "framer-motion";
 
@@ -13,7 +13,7 @@ export default function ScrollProgress() {
   return (
     <motion.div
       style={{ scaleX, transformOrigin: "left" }}
-      className="fixed top-0 left-0 right-0 z-[99997] h-[3px] bg-[#f36c21] origin-left"
+      className="fixed top-0 left-0 right-0 z-[99997] h-[3px] bg-[#00C9C8] origin-left"
     />
   );
 }

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
@@ -38,7 +38,7 @@ export default function NavHeader() {
 
         {/* Logo */}
         <a href="#" className="relative z-10 flex flex-col leading-none group">
-          <span className="font-display text-lg tracking-[0.15em] text-[#f0ede8] group-hover:text-[#f36c21] transition-colors duration-300">
+          <span className="font-display text-lg tracking-[0.15em] text-[#f0ede8] group-hover:text-[#00C9C8] transition-colors duration-300">
             ATLAS
           </span>
           <span className="text-[9px] tracking-[0.28em] text-[#f0ede8]/30 uppercase mt-0.5">
@@ -77,7 +77,7 @@ export default function NavHeader() {
             href="https://calendly.com/drikusbisschoff/al-agency-discovery-call"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-[#f36c21] px-5 py-2.5 text-sm font-semibold text-black tracking-wide hover:bg-[#ff7a2f] transition-colors duration-200"
+            className="inline-flex items-center gap-2 rounded-full bg-[#00C9C8] px-5 py-2.5 text-sm font-semibold text-black tracking-wide hover:bg-[#00b3b2] transition-colors duration-200"
           >
             Book a Call
             <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true">
@@ -118,7 +118,7 @@ export default function NavHeader() {
             transition={{ duration: 0.25 }}
             className="fixed inset-0 z-[9980] bg-[#0a0a0a] flex flex-col items-center justify-center gap-8"
           >
-            <div className="absolute top-0 left-0 right-0 h-px bg-[#f36c21] opacity-30" />
+            <div className="absolute top-0 left-0 right-0 h-px bg-[#00C9C8] opacity-30" />
             {links.map((link, i) => (
               <motion.button
                 key={link.href}
@@ -127,7 +127,7 @@ export default function NavHeader() {
                 exit={{ opacity: 0, y: 24 }}
                 transition={{ delay: i * 0.07, duration: 0.35 }}
                 onClick={() => scrollTo(link.href)}
-                className="font-display text-5xl text-[#f0ede8] hover:text-[#f36c21] transition-colors tracking-wide"
+                className="font-display text-5xl text-[#f0ede8] hover:text-[#00C9C8] transition-colors tracking-wide"
               >
                 {link.label.toUpperCase()}
               </motion.button>
@@ -139,7 +139,7 @@ export default function NavHeader() {
               href="https://calendly.com/drikusbisschoff/al-agency-discovery-call"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 inline-flex items-center gap-2 rounded-full bg-[#f36c21] px-8 py-4 text-base font-semibold text-black"
+              className="mt-4 inline-flex items-center gap-2 rounded-full bg-[#00C9C8] px-8 py-4 text-base font-semibold text-black"
             >
               Book a Call
             </motion.a>

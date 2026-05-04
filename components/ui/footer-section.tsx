@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import React from 'react';
 import type { ComponentProps, ReactNode } from 'react';
@@ -54,11 +54,11 @@ function AtlasLogo() {
     return (
         <a href="#" aria-label="Atlas Leads home" className="group inline-flex items-center">
             <Image
-                src="/atlas-logo.jpeg"
+                src="/atlas-logo.png"
                 alt="Atlas Leads"
-                width={100}
-                height={100}
-                className="object-contain transition-opacity duration-300 group-hover:opacity-75"
+                width={128}
+                height={32}
+                className="h-8 w-auto object-contain transition-opacity duration-300 group-hover:opacity-75"
             />
         </a>
     );
@@ -69,7 +69,7 @@ export function Footer() {
     return (
         <footer className="relative w-full max-w-6xl mx-auto flex flex-col items-center justify-center rounded-t-3xl border-t border-white/5 px-6 py-12 lg:py-16"
             style={{
-                background: 'radial-gradient(35% 128px at 50% 0%, rgba(243,108,33,0.05), transparent)',
+                background: 'radial-gradient(35% 128px at 50% 0%, rgba(0,201,200,0.05), transparent)',
                 backgroundColor: '#0a0a0a',
             }}
         >
@@ -107,11 +107,11 @@ export function Footer() {
                                                 className="group inline-flex items-center gap-1.5 text-xs text-[#f0ede8]/35 hover:text-[#f0ede8] transition-colors duration-200"
                                             >
                                                 {link.icon && (
-                                                    <link.icon className="w-3.5 h-3.5 shrink-0 text-[#f0ede8]/20 group-hover:text-[#f36c21] transition-colors duration-200" />
+                                                    <link.icon className="w-3.5 h-3.5 shrink-0 text-[#f0ede8]/20 group-hover:text-[#00C9C8] transition-colors duration-200" />
                                                 )}
                                                 <span className="relative">
                                                     {link.title}
-                                                    <span className="absolute left-0 -bottom-px h-px w-0 bg-[#f36c21]/50 group-hover:w-full transition-all duration-300" />
+                                                    <span className="absolute left-0 -bottom-px h-px w-0 bg-[#00C9C8]/50 group-hover:w-full transition-all duration-300" />
                                                 </span>
                                             </a>
                                         </li>

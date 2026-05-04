@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useRef, useState } from "react";
 import { motion, useInView, useMotionValue, useSpring } from "framer-motion";
@@ -39,7 +39,7 @@ function RippleButton({ href }: { href: string }) {
       onMouseLeave={handleMouseLeave}
       onClick={handleClick}
       whileTap={{ scale: 0.97 }}
-      className="relative inline-flex items-center gap-4 rounded-full bg-[#f36c21] px-10 py-5 text-base font-semibold text-black tracking-wide overflow-hidden hover:bg-[#ff7a2f] transition-colors duration-300 shadow-[0_0_50px_rgba(243,108,33,0.3)]"
+      className="relative inline-flex items-center gap-4 rounded-full bg-[#00C9C8] px-10 py-5 text-base font-semibold text-black tracking-wide overflow-hidden hover:bg-[#00b3b2] transition-colors duration-300 shadow-[0_0_50px_rgba(0,201,200,0.3)]"
     >
       {ripples.map((r) => (
         <motion.span
@@ -82,7 +82,7 @@ export default function CTASection() {
         transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[min(700px,70vw)] h-[min(700px,70vw)] rounded-full pointer-events-none"
         style={{
-          background: "radial-gradient(circle, rgba(243,108,33,0.08) 0%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(0,201,200,0.08) 0%, transparent 70%)",
           filter: "blur(80px)",
         }}
       />
@@ -113,7 +113,7 @@ export default function CTASection() {
           initial={{ opacity: 0, y: 16 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="text-[10px] tracking-[0.28em] uppercase text-[#f36c21] font-medium mb-6 block"
+          className="text-[10px] tracking-[0.28em] uppercase text-[#00C9C8] font-medium mb-6 block"
         >
           Free strategy session
         </motion.span>
@@ -168,7 +168,7 @@ export default function CTASection() {
           {["20-min call", "100% free", "No obligation", "ROI mapping included"].map(
             (badge, i) => (
               <div key={i} className="flex items-center gap-2">
-                <span className="h-1 w-1 rounded-full bg-[#f36c21]/50" />
+                <span className="h-1 w-1 rounded-full bg-[#00C9C8]/50" />
                 {badge}
               </div>
             )

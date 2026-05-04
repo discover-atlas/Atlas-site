@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 
@@ -29,7 +29,7 @@ export default function TrustStrip() {
             <span className="text-sm font-medium tracking-wide text-[#f5f1ea]/50 whitespace-nowrap">
               {item}
             </span>
-            <span className="h-1 w-1 rounded-full bg-[#f36c21] shrink-0" />
+            <span className="h-1 w-1 rounded-full bg-[#00C9C8] shrink-0" />
           </div>
         ))}
       </div>

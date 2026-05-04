@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 
@@ -25,7 +25,7 @@ function AnimatedLink({
 
   const content = (
     <>
-      <span className="absolute -left-4 h-px w-0 bg-[#f36c21] group-hover:w-3 transition-all duration-300 top-1/2 -translate-y-1/2" />
+      <span className="absolute -left-4 h-px w-0 bg-[#00C9C8] group-hover:w-3 transition-all duration-300 top-1/2 -translate-y-1/2" />
       {children}
     </>
   );
@@ -64,7 +64,7 @@ export default function Footer() {
         whileInView={{ scaleX: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
-        className="absolute top-0 left-0 right-0 h-px bg-[#f36c21] origin-left opacity-30"
+        className="absolute top-0 left-0 right-0 h-px bg-[#00C9C8] origin-left opacity-30"
       />
 
       {/* Watermark */}
@@ -103,7 +103,7 @@ export default function Footer() {
               whileInView={{ scaleX: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3, duration: 0.7 }}
-              className="h-px w-12 bg-[#f36c21] origin-left mt-6 opacity-60"
+              className="h-px w-12 bg-[#00C9C8] origin-left mt-6 opacity-60"
             />
           </motion.div>
 
@@ -142,7 +142,7 @@ export default function Footer() {
               href="https://calendly.com/drikusbisschoff/al-agency-discovery-call"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2.5 rounded-full border border-[#f36c21]/25 px-5 py-3 text-sm text-[#f36c21] hover:bg-[#f36c21]/8 hover:border-[#f36c21]/50 transition-all duration-300 mb-6"
+              className="inline-flex items-center gap-2.5 rounded-full border border-[#00C9C8]/25 px-5 py-3 text-sm text-[#00C9C8] hover:bg-[#00C9C8]/8 hover:border-[#00C9C8]/50 transition-all duration-300 mb-6"
             >
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
                 <rect x="1.5" y="2.5" width="11" height="10" rx="1.5" stroke="currentColor" strokeWidth="1.2" />
@@ -155,7 +155,7 @@ export default function Footer() {
               <p className="text-xs text-[#f0ede8]/20">No commitment · No pressure</p>
               <a
                 href="mailto:discover@atlasleadsagency.com"
-                className="text-xs text-[#f0ede8]/35 hover:text-[#f36c21] transition-colors duration-200 block mt-3"
+                className="text-xs text-[#f0ede8]/35 hover:text-[#00C9C8] transition-colors duration-200 block mt-3"
               >
                 discover@atlasleadsagency.com
               </a>
@@ -176,7 +176,7 @@ export default function Footer() {
           </p>
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="flex items-center gap-1.5 text-xs text-[#f0ede8]/25 hover:text-[#f36c21] transition-colors duration-200"
+            className="flex items-center gap-1.5 text-xs text-[#f0ede8]/25 hover:text-[#00C9C8] transition-colors duration-200"
           >
             Back to top
             <svg width="11" height="11" viewBox="0 0 11 11" fill="none" aria-hidden="true">

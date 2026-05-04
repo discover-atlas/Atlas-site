@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
@@ -11,7 +11,7 @@ const stats = [
     suffix: "%",
     label: "of leads lost",
     sub: "Due to slow response and broken funnels",
-    color: "#f36c21",
+    color: "#00C9C8",
   },
   {
     value: 53,
@@ -19,7 +19,7 @@ const stats = [
     suffix: "%",
     label: "never call back",
     sub: "Prospects who go unanswered choose a competitor",
-    color: "#f36c21",
+    color: "#00C9C8",
   },
   {
     value: 2,
@@ -27,7 +27,7 @@ const stats = [
     suffix: " = invisible",
     label: "No clicks, no jobs",
     sub: "91% of searchers never go past page one",
-    color: "#f36c21",
+    color: "#00C9C8",
   },
 ];
 
@@ -61,7 +61,7 @@ export default function ProblemSection() {
         {particles.map((p, i) => (
           <motion.div
             key={i}
-            className="absolute rounded-full bg-[#f36c21]"
+            className="absolute rounded-full bg-[#00C9C8]"
             style={{
               left: `${p.x}%`,
               top: `${p.y}%`,
@@ -85,7 +85,7 @@ export default function ProblemSection() {
 
       {/* Radial glow */}
       <div className="absolute inset-0 pointer-events-none" style={{
-        background: "radial-gradient(ellipse 80% 50% at 50% 50%, rgba(243,108,33,0.04) 0%, transparent 70%)"
+        background: "radial-gradient(ellipse 80% 50% at 50% 50%, rgba(0,201,200,0.04) 0%, transparent 70%)"
       }} />
 
       <div className="relative z-10 max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -104,7 +104,7 @@ export default function ProblemSection() {
           >
             MOST HOME SERVICES
             <br />
-            <span style={{ WebkitTextStroke: "1px rgba(243,108,33,0.5)", color: "transparent" }}>
+            <span style={{ WebkitTextStroke: "1px rgba(0,201,200,0.5)", color: "transparent" }}>
               SITES ARE LOSING
             </span>
             <br />
@@ -125,10 +125,10 @@ export default function ProblemSection() {
               className="relative rounded-2xl border border-white/8 bg-[#0f0f0f] p-5 md:p-8 overflow-hidden"
             >
               {/* Corner glow */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-[#f36c21] opacity-[0.04] rounded-full -translate-x-1/4 -translate-y-1/4 blur-2xl" />
+              <div className="absolute top-0 right-0 w-32 h-32 bg-[#00C9C8] opacity-[0.04] rounded-full -translate-x-1/4 -translate-y-1/4 blur-2xl" />
 
               <div className="relative z-10">
-                <div className="font-display text-[clamp(2.5rem,5vw,4.5rem)] text-[#f36c21] mb-4 orange-text-glow">
+                <div className="font-display text-[clamp(2.5rem,5vw,4.5rem)] text-[#00C9C8] mb-4 orange-text-glow">
                   <AnimatedCounter
                     to={stat.value}
                     prefix={stat.prefix}
@@ -145,7 +145,7 @@ export default function ProblemSection() {
                 whileInView={{ scaleX: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.5 + i * 0.15, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-                className="absolute bottom-0 left-0 right-0 h-px bg-[#f36c21] origin-left opacity-50"
+                className="absolute bottom-0 left-0 right-0 h-px bg-[#00C9C8] origin-left opacity-50"
               />
             </motion.div>
           ))}
@@ -165,7 +165,7 @@ export default function ProblemSection() {
               href="https://calendly.com/drikusbisschoff/al-agency-discovery-call"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#f36c21] underline underline-offset-4 decoration-[#f36c21]/30 hover:decoration-[#f36c21] transition-colors"
+              className="text-[#00C9C8] underline underline-offset-4 decoration-[#00C9C8]/30 hover:decoration-[#00C9C8] transition-colors"
             >
               Let&apos;s fix yours.
             </a>

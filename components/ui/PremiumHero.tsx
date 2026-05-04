@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useRef, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -58,10 +58,10 @@ function BeamCanvas() {
         const endY = oy + Math.cos(beam.angle) * len;
 
         const grad = ctx.createLinearGradient(ox, oy, endX, endY);
-        grad.addColorStop(0, `rgba(243,108,33,${Math.min(opacity * 3.5, 0.12).toFixed(4)})`);
-        grad.addColorStop(0.2, `rgba(243,108,33,${opacity.toFixed(4)})`);
-        grad.addColorStop(0.7, `rgba(243,108,33,${(opacity * 0.3).toFixed(4)})`);
-        grad.addColorStop(1, "rgba(243,108,33,0)");
+        grad.addColorStop(0, `rgba(0,201,200,${Math.min(opacity * 3.5, 0.12).toFixed(4)})`);
+        grad.addColorStop(0.2, `rgba(0,201,200,${opacity.toFixed(4)})`);
+        grad.addColorStop(0.7, `rgba(0,201,200,${(opacity * 0.3).toFixed(4)})`);
+        grad.addColorStop(1, "rgba(0,201,200,0)");
 
         ctx.beginPath();
         ctx.moveTo(ox, oy);
@@ -141,11 +141,11 @@ export default function PremiumHero() {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 2.0 }}
           className="mb-8 flex items-center gap-4"
         >
-          <span className="h-px w-10 bg-[#f36c21]/50" />
+          <span className="h-px w-10 bg-[#00C9C8]/50" />
           <span className="text-[10px] tracking-[0.35em] text-[#f0ede8]/35 uppercase font-medium">
             Automation Consulting
           </span>
-          <span className="h-px w-10 bg-[#f36c21]/50" />
+          <span className="h-px w-10 bg-[#00C9C8]/50" />
         </motion.div>
 
         {/* ATLAS */}
@@ -191,7 +191,7 @@ export default function PremiumHero() {
             href="https://calendly.com/drikusbisschoff/al-agency-discovery-call"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 rounded-full bg-[#f36c21] px-8 py-4 text-sm font-semibold text-black tracking-wide hover:bg-[#ff7a2f] transition-colors duration-200 shadow-[0_0_40px_rgba(243,108,33,0.3)]"
+            className="inline-flex items-center gap-3 rounded-full bg-[#00C9C8] px-8 py-4 text-sm font-semibold text-black tracking-wide hover:bg-[#00b3b2] transition-colors duration-200 shadow-[0_0_40px_rgba(0,201,200,0.3)]"
           >
             Book a Strategy Call
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
@@ -220,7 +220,7 @@ export default function PremiumHero() {
         <motion.div
           animate={{ y: [0, 7, 0] }}
           transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
-          className="h-9 w-px bg-gradient-to-b from-[#f36c21]/50 to-transparent"
+          className="h-9 w-px bg-gradient-to-b from-[#00C9C8]/50 to-transparent"
         />
       </motion.div>
     </section>

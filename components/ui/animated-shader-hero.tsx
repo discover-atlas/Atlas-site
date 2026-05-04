@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useRef, useEffect } from "react";
 import { ArrowRight, PhoneCall } from "lucide-react";
@@ -405,7 +405,7 @@ const Hero: React.FC<HeroProps> = ({
           {/* Trust badge */}
           {trustBadge && (
             <div className="al-fade-down mb-8">
-              <span className="inline-flex items-center gap-2 rounded-full border border-[#f36c21]/25 bg-[#f36c21]/8 backdrop-blur-sm px-5 py-2.5 text-[10px] tracking-[0.28em] uppercase text-[#f36c21] font-medium">
+              <span className="inline-flex items-center gap-2 rounded-full border border-[#00C9C8]/25 bg-[#00C9C8]/8 backdrop-blur-sm px-5 py-2.5 text-[10px] tracking-[0.28em] uppercase text-[#00C9C8] font-medium">
                 {trustBadge.icon && (
                   <span aria-hidden="true">{trustBadge.icon}</span>
                 )}

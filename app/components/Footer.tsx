@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 
@@ -36,7 +36,7 @@ export default function Footer() {
         whileInView={{ scaleX: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-        className="absolute top-0 left-0 right-0 h-px bg-[#f36c21] origin-left opacity-40"
+        className="absolute top-0 left-0 right-0 h-px bg-[#00C9C8] origin-left opacity-40"
       />
 
       {/* Large background watermark */}
@@ -46,7 +46,7 @@ export default function Footer() {
       >
         <span
           className="font-display select-none leading-none"
-          style={{ fontSize: "clamp(4rem, 18vw, 18rem)", color: "rgba(243,108,33,0.02)" }}
+          style={{ fontSize: "clamp(4rem, 18vw, 18rem)", color: "rgba(0,201,200,0.02)" }}
         >
           ATLAS LEADS
         </span>
@@ -63,7 +63,7 @@ export default function Footer() {
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           >
             <div className="font-display text-3xl tracking-widest mb-4">
-              ATLAS <span className="text-[#f36c21]">LEADS</span>
+              ATLAS <span className="text-[#00C9C8]">LEADS</span>
             </div>
             <p className="text-sm text-[#f5f1ea]/40 leading-relaxed max-w-xs">
               Digital growth partners for home services businesses ready to dominate
@@ -75,7 +75,7 @@ export default function Footer() {
               whileInView={{ scaleX: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-              className="h-px w-16 bg-[#f36c21] origin-left mt-6"
+              className="h-px w-16 bg-[#00C9C8] origin-left mt-6"
             />
           </motion.div>
 
@@ -94,9 +94,9 @@ export default function Footer() {
                 <li key={link.href}>
                   <button
                     onClick={() => scrollTo(link.href)}
-                    className="text-sm text-[#f5f1ea]/50 hover:text-[#f36c21] transition-colors duration-200 flex items-center gap-2 group"
+                    className="text-sm text-[#f5f1ea]/50 hover:text-[#00C9C8] transition-colors duration-200 flex items-center gap-2 group"
                   >
-                    <span className="h-px w-0 bg-[#f36c21] group-hover:w-4 transition-all duration-300" />
+                    <span className="h-px w-0 bg-[#00C9C8] group-hover:w-4 transition-all duration-300" />
                     {link.label}
                   </button>
                 </li>
@@ -120,7 +120,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               whileHover={{ x: 4 }}
               transition={{ type: "spring", stiffness: 400, damping: 25 }}
-              className="inline-flex items-center gap-3 rounded-full border border-[#f36c21]/30 px-5 py-3 text-sm text-[#f36c21] hover:bg-[#f36c21]/10 hover:border-[#f36c21] transition-colors duration-300 mb-6"
+              className="inline-flex items-center gap-3 rounded-full border border-[#00C9C8]/30 px-5 py-3 text-sm text-[#00C9C8] hover:bg-[#00C9C8]/10 hover:border-[#00C9C8] transition-colors duration-300 mb-6"
             >
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                 <rect x="2" y="3" width="12" height="11" rx="2" stroke="currentColor" strokeWidth="1.3" />
@@ -134,7 +134,7 @@ export default function Footer() {
               <p className="text-xs text-[#f5f1ea]/25">No obligation · No pressure</p>
               <a
                 href="mailto:discover@atlasleadsagency.com"
-                className="text-xs text-[#f5f1ea]/40 hover:text-[#f36c21] transition-colors duration-200 block mt-3"
+                className="text-xs text-[#f5f1ea]/40 hover:text-[#00C9C8] transition-colors duration-200 block mt-3"
               >
                 discover@atlasleadsagency.com
               </a>
@@ -158,10 +158,10 @@ export default function Footer() {
             <span className="text-xs text-[#f5f1ea]/20">
               Built for home services.
             </span>
-            <span className="h-1 w-1 rounded-full bg-[#f36c21]/40" />
+            <span className="h-1 w-1 rounded-full bg-[#00C9C8]/40" />
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              className="text-xs text-[#f5f1ea]/30 hover:text-[#f36c21] transition-colors duration-200 flex items-center gap-1.5"
+              className="text-xs text-[#f5f1ea]/30 hover:text-[#00C9C8] transition-colors duration-200 flex items-center gap-1.5"
             >
               Back to top
               <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">

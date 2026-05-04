@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React from "react";
 import { motion, useReducedMotion } from "motion/react";
@@ -85,14 +85,14 @@ export default function ServicesSection() {
         className="absolute top-0 left-0 right-0 h-px pointer-events-none"
         style={{
           background:
-            "linear-gradient(90deg, transparent, rgba(243,108,33,0.15), transparent)",
+            "linear-gradient(90deg, transparent, rgba(0,201,200,0.15), transparent)",
         }}
       />
 
       <div className="mx-auto w-full max-w-6xl space-y-16 px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <AnimatedContainer className="max-w-xl">
-          <span className="text-[10px] tracking-[0.28em] uppercase text-[#f36c21] font-medium mb-5 block">
+          <span className="text-[10px] tracking-[0.28em] uppercase text-[#00C9C8] font-medium mb-5 block">
             What we build
           </span>
           <h2

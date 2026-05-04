@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
@@ -53,7 +53,7 @@ export default function ResultsSection() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse 100% 80% at 50% 50%, rgba(243,108,33,0.06) 0%, transparent 70%)",
+            "radial-gradient(ellipse 100% 80% at 50% 50%, rgba(0,201,200,0.06) 0%, transparent 70%)",
         }}
       />
 
@@ -63,7 +63,7 @@ export default function ResultsSection() {
         aria-hidden="true"
       >
         <span
-          className="font-display text-[#f36c21] select-none"
+          className="font-display text-[#00C9C8] select-none"
           style={{ fontSize: "clamp(4rem, 20vw, 22rem)", opacity: 0.02 }}
         >
           RESULTS
@@ -78,13 +78,13 @@ export default function ResultsSection() {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="mb-12 md:mb-16 lg:mb-20 text-center"
         >
-          <span className="text-[11px] tracking-[0.25em] uppercase text-[#f36c21] font-medium mb-4 block">
+          <span className="text-[11px] tracking-[0.25em] uppercase text-[#00C9C8] font-medium mb-4 block">
             By the numbers
           </span>
           <h2 className="font-display text-[clamp(2rem,6vw,6rem)] text-[#f5f1ea] leading-tight">
             THE PROOF IS IN THE
             <br />
-            <span className="text-[#f36c21]">PIPELINE</span>
+            <span className="text-[#00C9C8]">PIPELINE</span>
           </h2>
         </motion.div>
 
@@ -103,10 +103,10 @@ export default function ResultsSection() {
                 initial={{ opacity: 0 }}
                 whileHover={{ opacity: 1 }}
                 className="absolute inset-0 pointer-events-none"
-                style={{ background: "radial-gradient(circle at 50% 100%, rgba(243,108,33,0.08) 0%, transparent 70%)" }}
+                style={{ background: "radial-gradient(circle at 50% 100%, rgba(0,201,200,0.08) 0%, transparent 70%)" }}
               />
 
-              <div className="font-display text-[clamp(2.5rem,5vw,4.5rem)] text-[#f36c21] leading-none orange-text-glow">
+              <div className="font-display text-[clamp(2.5rem,5vw,4.5rem)] text-[#00C9C8] leading-none orange-text-glow">
                 {isInView && (
                   <AnimatedCounter
                     to={stat.value}
@@ -127,7 +127,7 @@ export default function ResultsSection() {
                 initial={{ scaleX: 0 }}
                 animate={isInView ? { scaleX: 1 } : {}}
                 transition={{ delay: 0.6 + i * 0.12, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-                className="absolute bottom-0 left-0 right-0 h-px bg-[#f36c21] origin-left opacity-30"
+                className="absolute bottom-0 left-0 right-0 h-px bg-[#00C9C8] origin-left opacity-30"
               />
             </motion.div>
           ))}
