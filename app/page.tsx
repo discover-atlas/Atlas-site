@@ -4,6 +4,7 @@ import ScrollProgress from "./components/ScrollProgress";
 import NavHeader from "@/components/ui/nav-header";
 import { PremiumHero } from "@/components/ui/hero";
 import ServicesSection from "./components/ServicesSection";
+import { Gallery6 } from "@/components/ui/gallery6";
 import AnimatedSocialMediaSection from "./components/AnimatedSocialMediaSection";
 import ProcessSection from "./components/ProcessSection";
 import ModernBackgroundPaths from "@/components/ui/modern-background-paths";
@@ -24,6 +25,7 @@ export default function Home() {
       <main>
         <PremiumHero />
         <ServicesSection />
+        <Gallery6 />
         <AnimatedSocialMediaSection />
         <ProcessSection />
         <ModernBackgroundPaths title="Automate Everything" />
