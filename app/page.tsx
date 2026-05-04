@@ -4,7 +4,6 @@ import ScrollProgress from "./components/ScrollProgress";
 import NavHeader from "@/components/ui/nav-header";
 import { Hero } from "@/components/ui/lamp-hero";
 import ServicesSection from "./components/ServicesSection";
-import { Gallery6 } from "@/components/ui/gallery6";
 import AnimatedSocialMediaSection from "./components/AnimatedSocialMediaSection";
 import ProcessSection from "./components/ProcessSection";
 import CTASection from "@/components/ui/cta-section";
@@ -40,7 +39,6 @@ export default function Home() {
           ]}
         />
         <ServicesSection />
-        <Gallery6 />
         <AnimatedSocialMediaSection />
         <ProcessSection />
         <CTASection />

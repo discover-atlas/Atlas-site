@@ -11,7 +11,7 @@ export default function CTASection() {
   return (
     <section
       id="contact"
-      className="relative bg-[#0a0a0a] py-40 md:py-52 lg:py-64 overflow-hidden"
+      className="relative bg-[#0a0a0a] py-20 md:py-32 overflow-hidden"
     >
       {/* Subtle centered radial glow */}
       <div

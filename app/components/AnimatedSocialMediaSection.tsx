@@ -133,7 +133,7 @@ const contentTypes = [
 
 export default function AnimatedSocialMediaSection() {
   return (
-    <section id="content" className="relative bg-[#0d0d0d] py-32 md:py-40 lg:py-48 overflow-hidden">
+    <section id="content" className="relative bg-[#0d0d0d] py-20 md:py-32 overflow-hidden">
       {/* Subtle top divider */}
       <div
         className="absolute top-0 left-0 right-0 h-px pointer-events-none"

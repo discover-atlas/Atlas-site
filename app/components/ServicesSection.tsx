@@ -79,7 +79,7 @@ function AnimatedContainer({
 /* ── Section ── */
 export default function ServicesSection() {
   return (
-    <section id="services" className="relative bg-[#0a0a0a] py-32 md:py-40 lg:py-48">
+    <section id="services" className="relative bg-[#0a0a0a] py-20 md:py-32">
       {/* Subtle top accent line */}
       <div
         className="absolute top-0 left-0 right-0 h-px pointer-events-none"

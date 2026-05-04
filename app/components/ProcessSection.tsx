@@ -135,7 +135,7 @@ export default function ProcessSection() {
   const isHeaderInView = useInView(headerRef, { once: true });
 
   return (
-    <section id="process" className="relative bg-[#080808] py-32 md:py-40 lg:py-48 overflow-hidden">
+    <section id="process" className="relative bg-[#080808] py-20 md:py-32 overflow-hidden">
       {/* Background accent */}
       <div
         className="absolute inset-0 pointer-events-none"
