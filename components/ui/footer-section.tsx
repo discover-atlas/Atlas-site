@@ -4,6 +4,7 @@ import React from 'react';
 import type { ComponentProps, ReactNode } from 'react';
 import { motion, useReducedMotion } from 'motion/react';
 import { ExternalLink } from 'lucide-react';
+import Image from 'next/image';
 
 /* ── Types ── */
 interface FooterLink {
@@ -48,31 +49,17 @@ const footerLinks: FooterSection[] = [
     },
 ];
 
-/* ── Atlas Leads hex logo ── */
+/* ── Atlas Leads logo ── */
 function AtlasLogo() {
     return (
-        <a href="#" aria-label="Atlas Leads home" className="group inline-flex items-center gap-3">
-            <svg
-                width="34"
-                height="22"
-                viewBox="0 0 38 24"
-                fill="none"
-                aria-hidden="true"
-                className="shrink-0 transition-opacity duration-300 group-hover:opacity-70"
-            >
-                <polygon points="22,12 17,3 7,3 2,12 7,21 17,21" fill="white" fillOpacity="0.85" />
-                <polygon
-                    points="36,12 31,3 21,3 16,12 21,21 31,21"
-                    fill="white"
-                    fillOpacity="0.25"
-                    stroke="#0a0a0a"
-                    strokeWidth="0.75"
-                />
-            </svg>
-            <div className="flex flex-col leading-none select-none">
-                <span className="font-display text-[14px] tracking-[0.14em] text-white font-bold">ATLAS</span>
-                <span className="text-[8px] tracking-[0.24em] text-white/35 uppercase font-medium mt-0.5">LEADS</span>
-            </div>
+        <a href="#" aria-label="Atlas Leads home" className="group inline-flex items-center">
+            <Image
+                src="/atlas-logo.jpeg"
+                alt="Atlas Leads"
+                width={100}
+                height={100}
+                className="object-contain transition-opacity duration-300 group-hover:opacity-75"
+            />
         </a>
     );
 }
